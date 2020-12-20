@@ -53,22 +53,23 @@
   }
 }
   
+// Iconos que activan o cierran el Sidebar
 .sidebar-icon {
   font-size: xx-large;
-  margin-left: 15%;
-  @include landscape-mobile {
-    margin-left: none;
+  @include desktop {
+    margin-left: 15%;
   }
 }
 
 .sidebar-icon-active {
   font-size: xx-large;
-  margin-left: 15%;
-  @include landscape-mobile {
-    margin-left: none;
+  margin-left: 35%;
+  @include desktop {
+    margin-left: 15%;
   }
 }
   
+// Cuerpo del Sidebar
 .sidebar-menu {
   background-color: white;
   height: 100vh;
@@ -81,40 +82,16 @@
   transition: 850ms;
 }
   
-  .sidebar-menu.active {
-    width: 40%;
-    left: 0;
-    transition: 400ms;
-    @include landscape-mobile {
-      width: 25%;
-    }
+.sidebar-menu.active {
+  width: 40%;
+  left: 0;
+  transition: 400ms;
+  @include landscape-mobile {
+    width: 25%;
   }
-  
-.nav-icons {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  //padding: 8px 0px 8px 16px;
-  list-style: none;
-  height: 60px;
 }
-  
-  .nav-icons a {
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 16px;
-    border-radius: 4px;
-  }
-  
-  .nav-icons a:hover {
-    background-color: #1a83ff;
-  }
-  
+
+// Lista de los items del Sidebar
 .sidebar-menu-items {
   width: 100%;
   padding: 0%;
@@ -124,13 +101,39 @@
 .sidebar-toggle {
   background-color: white;
   width: 100%;
-  height: 80px;
+  height: 14%;
   display: flex;
   justify-content: start;
   align-items: center;
 }
+
+// Contenido del Sidebar
+.nav-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  height: 3em;
+}
+  
+  .nav-icons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2em;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    border-radius: 4px;
+  }
+  
+  .nav-icons a:hover {
+    color: #1a83ff;
+    //background-color: #1a83ff;
+  }
   
 span {
-  margin-left: 16px;
+  margin-left: 1em;
 }
 
