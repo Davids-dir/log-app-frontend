@@ -1,0 +1,79 @@
+// Definimos los breakpoints para la parte responsive
+// Breakpoint para moviles
+@mixin mobile {
+    @media (min-width: 576px) {
+        @content;
+    }
+}
+
+// Breakpoint para tablets
+@mixin landscape-mobile {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Breakpoint para tablets apaisadas
+@mixin landscape-tablet {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// Breakpoint para portatiles u ordenadores de sobremesa
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Contenedor principal
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(31, 31, 153);
+    height: 14vh;
+    width: 100vw;
+    @include mobile {
+        background-color: brown;
+        height: 14vh;
+        width: 100vw;
+    }
+    @include landscape-mobile {
+        background-color: aqua;
+        height: 16vh;
+        width: 100vw;
+    }
+    @include landscape-tablet {
+        background-color: transparent;
+        height: 14vh;
+        width: 100vw;
+    }
+    
+}
+
+// Caja vacia de la parte izquierda
+.nullSpace1 {
+    height: 100%;
+    width: 15%;
+    @include landscape-tablet {
+        width: 10%;
+    }
+}
+
+// Contenedor del Nav
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 12.5%;
+}
+
+.nullNav1, .nullNav2 {
+    height: 24%;
+    width: 100%;
+    @include landscape-mobile {
+        height: 30%;
+        width: 100%;
+    }
+}
