@@ -1,0 +1,68 @@
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos moviles de hasta 1024px
+@media only screen and (max-width: 1024px) {
+    
+    .navContainer {
+        background: goldenrod;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 15%;
+    }
+
+    .navMenu {
+        background: #ffd369;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        transition: 500ms;
+    }
+
+    .navMenu-active {
+        background: #ffd369;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 500ms;
+    }
+
+    .navLogo-open {
+        font-size: x-large;
+    }
+
+    .navLogo-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        height: 20%;
+        width: 100%;
+    }
+
+    .navItems {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 60%;
+        width: 100%;
+    }
+
+    .navItem-data {
+        color: #393e46;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        font-size: x-large;
+        height: 20%;
+        width: 100%;
+    }
+}
+
+// BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
+// Estilos para dispositivos como minimo con 1024px

@@ -1,21 +1,26 @@
-// Importamos las dependencias necesarias
+// Importo las dependencias necesarias
 import React from 'react';
-import Sidebar from '../../components/Header/Nav/Sidebar';
+import Navbar from '../../components/Navbar/Navbar';
 
 
-// Importo los estilos
+// Importo la hoja de estilos
 import './Header.scss';
 
-// Creamos el componente Header
+
+// Contenedor Header
 const Header = ( ) => {
 
+
+
     return (
+        
         <div className="headerContainer">
-            <Sidebar/>
+            <div className="headerLogo"><a href="/">TIMERX</a></div>
+            <div className="nullSpace1"><h1>Header</h1></div>
+            <Navbar />
         </div>
     )
+}
 
-};
-
-// Exportamos el componente
+// Exporto el contenedor
 export default Header;

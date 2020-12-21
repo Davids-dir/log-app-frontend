@@ -1,79 +1,76 @@
-// Definimos los breakpoints para la parte responsive
-// Breakpoint para moviles
-@mixin mobile {
-    @media (min-width: 576px) {
-        @content;
-    }
-}
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos moviles de hasta 1024px
+@media only screen and (max-width: 1024px) {
 
-// Breakpoint para tablets
-@mixin landscape-mobile {
-    @media (min-width: 768px) {
-        @content;
-    }
-}
-
-// Breakpoint para tablets apaisadas
-@mixin landscape-tablet {
-    @media (min-width: 992px) {
-        @content;
-    }
-}
-
-// Breakpoint para portatiles u ordenadores de sobremesa
-@mixin desktop {
-    @media (min-width: 1200px) {
-        @content;
-    }
-}
-
-// Contenedor principal
-.headerContainer {
-    display: flex;
-    flex-direction: row;
-    background-color: rgb(31, 31, 153);
-    height: 14vh;
-    width: 100vw;
-    @include mobile {
-        background-color: brown;
-        height: 14vh;
+    // Contenedor principal
+    .headerContainer {
+        background-color: red;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 15vh;
         width: 100vw;
     }
-    @include landscape-mobile {
-        background-color: aqua;
-        height: 16vh;
-        width: 100vw;
-    }
-    @include landscape-tablet {
-        background-color: transparent;
-        height: 14vh;
-        width: 100vw;
-    }
-    
-}
 
-// Caja vacia de la parte izquierda
-.nullSpace1 {
-    height: 100%;
-    width: 15%;
-    @include landscape-tablet {
+    // Contenedor del logo
+    .headerLogo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+        height: 50%;
+        width: 15%;
+        a {
+            color:black;
+            text-decoration: none;
+        }
+    }
+
+    // Caja vacia
+    .nullSpace1 {
+        background: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+
+};
+
+// BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
+// Estilos para dispositivos como minimo de 1024px
+    @media only screen and (min-width: 1024px) {
+    .headerContainer {
+        background-color: cadetblue;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 15vh;
+        width: 100vw;
+    }
+
+    .headerLogo {
+        background: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
         width: 10%;
+        margin-left: 5%;
+        a {
+            color: black;
+            font-size: large;
+            text-decoration: none;
+        }
     }
-}
 
-// Contenedor del Nav
-.navContainer {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 12.5%;
-}
-
-.nullNav1, .nullNav2 {
-    height: 24%;
-    width: 100%;
-    @include landscape-mobile {
-        height: 30%;
-        width: 100%;
+    .nullSpace1 {
+        background: hotpink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40%;
     }
 }
