@@ -1,0 +1,33 @@
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+    .carouselContainer {
+        background: red;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    .imageCarousel1 .imageCarousel2 .imageCarousel3{
+        background-size: cover;
+    }
+}
+
+// BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
+// Estilos para dispositivos como minimo de 1024px
+@media only screen and (min-width: 1024px) {
+
+    .carouselContainer {
+        background: red;
+        display: flex;
+        flex-direction: column;
+        height: 91vh;
+        width: 100%;
+    }
+
+    .imageCarousel1 .imageCarousel2 .imageCarousel3{
+        
+    }
+}

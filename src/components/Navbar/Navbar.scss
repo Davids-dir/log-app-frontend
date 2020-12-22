@@ -3,7 +3,7 @@
 @media only screen and (max-width: 1024px) {
     
     .navContainer {
-        background: goldenrod;
+        background: transparent;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -62,7 +62,51 @@
         height: 20%;
         width: 100%;
     }
+
+    .navDesktop {
+        display: none;
+    }
 }
 
 // BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
 // Estilos para dispositivos como minimo con 1024px
+@media only screen and (min-width: 1024px) {
+
+    .navContainer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 40%;
+    }
+
+    .navLogo-open {
+        display: none;
+    }
+
+    .navMenu {
+        display: none;
+    }
+
+    .navDesktop {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navItem-data {
+        color: #ffd369;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-decoration: none;
+        height: 30%;
+        width: 20%;
+    }
+
+    .navItem-data:hover {
+        color: #eeeeee;
+    }
+}

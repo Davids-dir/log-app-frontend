@@ -38,6 +38,13 @@ const Navbar = ( ) => {
                     })}
                 </div>
             </div>
+            <div className="navDesktop">
+            { menuData.map (( item, indexItem) => {
+                        return (
+                            <a key={ indexItem } className="navItem-data" href={item.path}>{ item.title }</a>
+                        )
+                    })}
+            </div>
         </div>
                 
     )

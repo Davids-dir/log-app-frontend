@@ -1,0 +1,196 @@
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos de hasta 768px
+@media only screen and (max-width: 768px) {
+
+    .homeContainer {
+        background: turquoise;
+        height: 88vh;
+        width: 100vw;
+    }
+
+    .sectionOne {
+        display: flex;
+        flex-direction: column;
+        height: 200vh;
+        width: 100vw;
+    }
+
+    .sectionOne-upleft {
+        background: coral;
+        height: 50%;
+        width: 100%;
+    }
+
+    .sectionOne-upright {
+        background: cornflowerblue;
+        height: 50%;
+        width: 100%;
+    }
+
+    .sectionOne-downleft {
+        background: cornsilk;
+        height: 50%;
+        width: 100%;
+    }
+
+    .sectionOne-downright {
+        background: crimson;
+        height: 50%;
+        width: 100%;
+    }
+}
+
+// Estilos para dispositivos de hasta 1024px
+@media only screen and (min-width: 768px) {
+    .homeContainer {
+        background: turquoise;
+        height: 88vh;
+        width: 100vw;
+    }
+
+    .sectionOne {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sectionOne-upleft {
+        background: coral;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-upright {
+        background: cornflowerblue;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-downleft {
+        background: cornsilk;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-downright {
+        background: crimson;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionTwo {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sectionTwo-up {
+        background: black;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .sectionTwo-mid {
+        background: whitesmoke;
+        display: flex;
+        flex-direction: row;
+        height: 55%;
+        width: 100%;
+    }
+
+    .sectionTwo-down {
+        background: black;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .midleft-text {
+        height: 100%;
+        width: 40%;
+    }
+
+    .midright-image {
+        background: yellow;
+        height: 120%;
+        width: 60%;
+        margin: -4%
+    }
+}
+
+// BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
+// Estilos para dispositivos como minimo de 1024px
+@media only screen and (min-width: 1024px) {
+
+    .homeContainer {
+        height: 91vh;
+        width: 100vw;
+    }
+
+    .sectionOne {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sectionOne-upleft {
+        background: coral;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-upright {
+        background: cornflowerblue;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-downleft {
+        background: cornsilk;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionOne-downright {
+        background: crimson;
+        height: 50%;
+        width: 50%;
+    }
+
+    .sectionTwo {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .sectionTwo-up {
+        background: black;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .sectionTwo-mid {
+        background: whitesmoke;
+        display: flex;
+        flex-direction: row;
+        height: 55%;
+        width: 100%;
+    }
+
+    .sectionTwo-down {
+        background: black;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .midleft-text {
+        height: 100%;
+        width: 40%;
+    }
+
+    .midright-image {
+        background: yellow;
+        height: 120%;
+        width: 60%;
+        margin: -3% 0% 0% -3%;
+    }
+}
