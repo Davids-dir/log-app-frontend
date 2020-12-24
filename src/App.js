@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 // Importamos los archivos necesarios
 import Header from './containers/Header/Header';
 import Home from './containers/Home/Home';
+import Register from './containers/Register/Register';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
 
           {/* Rutas de las vistas */}
           <Route path='/' component={ Home } exact />
+          <Route path='/login' component={ Register } exact />
           
           </Switch>
 
