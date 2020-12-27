@@ -1,0 +1,58 @@
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos con pantallas de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+}
+
+// BREAKPOINT PARA TABLETS Y ORDENADORES
+// Estilos para dispositivos como minimo con pantallas de 1024px
+@media only screen and (min-width: 1024px) {
+    .panelContainer {
+        background-color: yellow;
+        border: black solid 2px;
+        border-radius: 4px;
+        height: 60%;
+        width: 60%;
+    }
+
+    .infoContainer {
+        display: flex;
+        flex-direction: row;
+        height: 15%;
+        width: 100%;
+    }
+
+    .panelName {
+        background: yellowgreen;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 60%;
+    }
+
+    .panelDate {
+        background: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 40%;
+    }
+
+    .adminPanel {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .optionsPanel {
+        height: 100%;
+        width: 50%;
+    }
+    
+    .selectPanel {
+        height: 100%;
+        width: 50%;
+    }
+}

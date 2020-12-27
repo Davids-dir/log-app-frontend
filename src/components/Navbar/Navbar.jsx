@@ -16,7 +16,7 @@ const Navbar = ( ) => {
     const [ menu, setMenu ] = useState (false);
 
     // Hook en caso de que se haga Login con el rol de Administrador
-    const [ admin, setAdmin ] = useState (false);
+    const [ admin, setAdmin ] = useState (JSON.parse (localStorage.getItem ('user')));
 
     // Logica para abrir o cerrar el Menu
     const showMenu = ( ) => setMenu (!menu);
@@ -34,17 +34,17 @@ const Navbar = ( ) => {
                     <RxIcons.RiCloseFill onClick={ showMenu} />
                 </div>
                 <div className="navItems">
-                    { menuData.map (( item, indexItem) => {
+                    { menuData.map ((item, indexItem) => {
                         return (
-                            <a key={ indexItem } className="navItem-data" href={item.path}>{ item.title }</a>
+                            <a key={ indexItem } className="navItem-data" href={ item.path }>{ item.title }</a>
                         )
                     })}
                 </div>
             </div>
             <div className="navDesktop">
-            { menuData.map (( item, indexItem) => {
+            { menuData.map ((item, indexItem) => {
                         return (
-                            <a key={ indexItem } className="navItem-data" href={item.path}>{ item.title }</a>
+                            <a key={ indexItem } className="navItem-data" href={ item.path }>{ item.title }</a>
                         )
                     })}
             </div>

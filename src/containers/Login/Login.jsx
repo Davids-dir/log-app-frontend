@@ -1,5 +1,6 @@
 // Importo las dependencias necesarias
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 // Importo la hoja de estilos
@@ -7,46 +8,53 @@ import './Login.scss';
 
 
 // Logica del contenedor LOGIN
-const Login = ( ) => {
+const Login = () => {
 
     // Hook de estado
-    const [ user, setUser ] = useState ({ email: '', password: '', })
+    const [user, setUser] = useState({ email: '', password: '', })
 
-    // Evento dondo asigno el valor del Input al 'user'
-    const eventHandler = e => { setUser ({ ...user, [ e.target.name ]: e.target.value })}
+    // Evento donde asigno el valor del Input al 'user'
+    const eventHandler = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
+
+    const redirect = useHistory();
 
     // Funcion para conseguir la IP del dispositivo del usuario que hace Login
-    const getIP = ( ) => {
+    const getIP = () => {
 
-         axios.get ('https://api.ipify.org?format=json')
-        
-        .then (res => localStorage.setItem ('user_IP', JSON.stringify (res.data)))
-        .catch (error => { console.log (error)})
-        
+        axios.get('https://api.ipify.org?format=json')
+
+            .then(res => localStorage.setItem('user_IP', JSON.stringify(res.data)))
+            .catch(error => { console.log(error) })
+
     }
 
     // Funcion para el envio de datos contra la DB
-    const SendData = ( ) => {
+    const SendData = () => {
 
-        getIP ( );
+        getIP();
 
         // POST hacia el endpoint de Login
-        axios.post ('http://localhost:8000/api/user/login', user)
+        axios.post('http://localhost:8000/api/user/login', user)
 
-        .then (res => {
-            localStorage.setItem ('user', JSON.stringify (res.data))
-        })
-        .catch (error => console.log (error))
+            .then(res => {
+                localStorage.setItem('user', JSON.stringify(res.data))
+
+                setTimeout (() => {
+                    redirect.push('/user/profile')
+                }, 1500)
+                
+            })
+            .catch(error => console.log(error))
     }
 
     return (
         <div className="loginContainer">
             <form className="formContainer">
                 <label>Correo electrónico</label>
-                <input type="text" name='email' onChange={ eventHandler } />
+                <input type="text" name='email' onChange={eventHandler} />
                 <label>Contraseña</label>
-                <input type="password" name='password' onChange={ eventHandler } />
-                <button type="button" onClick={ ( ) => SendData ( ) }>Login</button>
+                <input type="password" name='password' onChange={eventHandler} />
+                <button type="button" onClick={() => SendData()}>Login</button>
             </form>
         </div>
     )
