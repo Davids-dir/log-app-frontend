@@ -43,15 +43,44 @@
     .adminPanel {
         display: flex;
         flex-direction: row;
+        height: 85%;
+        width: 100%;
 
     }
 
-    .optionsPanel {
+    .adminOptions {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 100%;
         width: 50%;
     }
+
+    .employeesPanel {
+        height: 30%;
+        width: 50%;
+    }
     
+    .workPanel {
+        height: 30%;
+        width: 50%;
+    }
+
     .selectPanel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 50%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .prueba {
         height: 100%;
         width: 50%;
     }
