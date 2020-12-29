@@ -1,0 +1,43 @@
+// BREAKPOINT PARA DISPOSITIVOS MOVILES
+// Estilos para dispositivos de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+}
+
+// BREAKPOINT PARA TABLETS Y ORDENADORES
+// Estilos para dispositivos como minimo de hasta 1024px
+@media only screen and (min-width: 1024px) {
+
+    .manageContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        
+    }
+
+    .buttonContainer1 {
+        height: 10%;
+        width: 20%;
+    }
+
+    .buttonManage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .manageRoster {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+}

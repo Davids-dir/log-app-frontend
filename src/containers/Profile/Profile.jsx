@@ -1,6 +1,6 @@
 // Importo las dependencias necesarias
 import React from 'react';
-import ControlPanel from '../../components/ControlPanel/ControlPanel';
+import Manage from '../../components/Employees/Employees';
 
 
 // Hoja de estilos
@@ -15,8 +15,10 @@ const Profile = ( ) => {
     return (
 
         <div className='profileContainer'>
-            <div className="nullProfile1">VACIO</div>
-            <ControlPanel />
+            <div className="nullProfile1"></div>
+            <div className="controlPanel">
+                <Manage />
+            </div>
         </div>
 
     )
