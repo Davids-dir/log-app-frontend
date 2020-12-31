@@ -33,11 +33,46 @@
     .manageRoster {
         display: flex;
         flex-direction: column;
-        
+        align-items: center;
+        height: 80%;
+        width: 80%;
     }
 
     a {
         text-decoration: none;
+    }
+
+    .formEntry {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sendButton {
+        height: 10%;
+        width: 45%;
+    }
+
+    .deleteEntry {
+        height: 100%;
+        width: 100%;
+    }
+
+    .searchContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .searchInput {
+        height: 10%;
+        width: 50%;
+    }
+
+    .searchButton {
+        height: 10%;
+        width: 15%;
     }
 
 }
