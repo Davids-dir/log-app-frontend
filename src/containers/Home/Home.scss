@@ -112,6 +112,7 @@
         justify-content: center;
         align-items: center;
         text-decoration: underline #ff2e63;
+        padding-left: 2.5%;
         height: 100%;
         width: 100%;
     }
@@ -128,6 +129,7 @@
         background:  url(../../images/office-cover.jpg);
         background-size: cover;
         background-repeat: no-repeat;
+        border-bottom: black solid 1px;
         height: 100%;
         width: 100%;
     }
@@ -147,11 +149,11 @@
 
     .upleft-img {
         background: url(../../images/time-control.jpg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 100%;
-        width: 100%;
+        height: 90%;
+        width: 90%;
     }
 
     .sectionOne-upright {
@@ -170,18 +172,18 @@
     }
 
     .sectionOne-downright {
-        background: crimson;
+        background: #eaeaea;
         height: 50%;
         width: 100%;
     }
 
     .downright-img {
         background: url(../../images/time-management.jpg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-        height: 100%;
-        width: 100%;
+        height: 90%;
+        width: 90%;
     }
 
     .sectionTwo {
@@ -190,9 +192,10 @@
     }
 
     .sectionTwo-up {
-        background: black;
+        background: #252a34;
         height: 22.5%;
         width: 100%;
+        border-bottom: red solid 1px;
     }
 
     .sectionTwo-mid {
@@ -204,9 +207,10 @@
     }
 
     .sectionTwo-down {
-        background: black;
+        background: #252a34;
         height: 22.5%;
         width: 100%;
+        border-top: red solid 1px;
     }
 
     .midleft-text {
@@ -215,10 +219,15 @@
     }
 
     .midright-image {
-        background: yellow;
-        height: 120%;
+        background: url(../../images/remote.jpg);
+        border: red solid 1px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 110%;
         width: 60%;
-        margin: -4%
+        margin-top: -3.5%;
+        margin-left: -1%;
     }
 }
 
@@ -343,9 +352,10 @@
         border: red solid 1px;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 120%;
+        height: 110%;
         width: 60%;
-        margin: -3% 0% 0% -3%;
+        margin-top: -1.5%;
+        margin-left: -1%;
     }
 
     p {
@@ -354,5 +364,9 @@
         padding: 4%;
         font-family: 'Nanum Gothic', sans-serif;
         background: #eaeaea;
+    }
+
+    h2 {
+        padding: 5%;
     }
 }

@@ -27,7 +27,7 @@ const Home = ( ) => {
             <div className="sectionTwo">
                 <div className="sectionTwo-up"></div>
                 <div className="sectionTwo-mid">
-                    <div className="midleft-text"><h2>Make your life easier with our APP</h2></div>
+                    <div className="midleft-text"><h2>Gestiona la entrada y salida de tus trabajadores de una manera agil y sencilla</h2></div>
                     <div className="midright-image"></div>
                 </div>
                 <div className="sectionTwo-down"></div>
