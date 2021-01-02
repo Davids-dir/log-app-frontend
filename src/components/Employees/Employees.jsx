@@ -28,7 +28,7 @@ const Manage = () => {
     })
 
     // Hook de busqueda
-    const [search, setSearch] = useState({ name: '', last_name: '' })
+    const [search, setSearch] = useState({ name: '' })
 
     // Funcion para cambiar el estado de los HOOKS
     const eventRoster = () => setShowMenu(!showMenu)
@@ -41,7 +41,7 @@ const Manage = () => {
     const handleEvent = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
 
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
-    const handleSearch = e => { setSearch({ search, [e.target.name]: e.target.value }) }
+    const handleSearch = e => { setSearch({ ...search, [e.target.name]: e.target.value }) }
 
     // Función que emplea el POST hacia la DB para registrar un nuevo empleado
     const sendData = () => {
@@ -64,10 +64,10 @@ const Manage = () => {
     // Función que realiza un GET para buscar un empleado concreto y que le pasamos el valor almacenado del Hook SEARCH
     const getData = () => {
 
-        axios.get('http://localhost:8000', search)
+        axios.post('http://localhost:8000/api/user/search_one', search)
 
-        .then (res => res.data)
-        .catch (error => console.log(error))
+            .then(res => res.data)
+            .catch(error => console.log(error))
     }
 
 
@@ -158,8 +158,8 @@ const Manage = () => {
                     {deleteEntry ?
                         <div className="deleteEntry">
                             <div className="searchContainer">
-                                <input className="searchInput" type="text" name={"name", "last_name" } placeholder="Introduce el nombre completo..." onChange={ handleSearch } />
-                                <button className="searchButton" type="submit" onClick={ getData }>Buscar</button>
+                                <input className="searchInput" type="text" name="name" placeholder="Introduce el nombre completo..." onChange={handleSearch} />
+                                <button className="searchButton" type="submit" onClick={() => getData()}>Buscar</button>
                             </div>
                         </div>
                         :

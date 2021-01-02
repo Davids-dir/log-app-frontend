@@ -1,41 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
 // BREAKPOINT PARA DISPOSITIVOS PORTATILES
 // Estilos para dispositivos de hasta 768px
 @media only screen and (max-width: 768px) {
 
     .homeContainer {
-        background: turquoise;
         height: 88vh;
         width: 100vw;
+    }
+
+    .coverImage {
+        background:  url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
     }
 
     .sectionOne {
         display: flex;
         flex-direction: column;
         height: 200vh;
-        width: 100vw;
+        width: 100%;
     }
 
     .sectionOne-upleft {
-        background: coral;
+        background: #ff2e63;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
         width: 100%;
+    }
+
+    .upleft-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 90%;
+        width: 90%;
     }
 
     .sectionOne-upright {
-        background: cornflowerblue;
-        height: 50%;
+        background: transparent;
+        height: 47.5%;
         width: 100%;
     }
 
+    // NO SE MUESTRA PARA VERSION MOVIL
     .sectionOne-downleft {
+        display: none;
         background: cornsilk;
         height: 50%;
         width: 100%;
     }
 
     .sectionOne-downright {
-        background: crimson;
+        background: #ff2e63;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
+        width: 100%;
+    }
+
+    .downright-img {
+        background: url(../../images/time-management.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 90%;
+        width: 90%;
+    }
+
+    p {
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+        padding: 4%;
+        font-family: 'Nanum Gothic', sans-serif;
+        background: #eaeaea;
+    }
+
+    .sectionTwo {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .sectionTwo-up {
+        background: #252a34;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .sectionTwo-mid {
+        background: #eaeaea;
+        display: flex;
+        flex-direction: row;
+        height: 55%;
+        width: 100%;
+    }
+
+    .sectionTwo-down {
+        background: #252a34;
+        height: 22.5%;
+        width: 100%;
+    }
+
+    .midleft-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline #ff2e63;
+        height: 100%;
         width: 100%;
     }
 }
@@ -43,45 +120,73 @@
 // Estilos para dispositivos de hasta 1024px
 @media only screen and (min-width: 768px) {
     .homeContainer {
-        background: turquoise;
-        height: 88vh;
-        width: 100vw;
+        height: 91vh;
+        width: 100%;
+    }
+
+    .coverImage {
+        background:  url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
     }
 
     .sectionOne {
         display: flex;
-        flex-wrap: wrap;
-        height: 100vh;
-        width: 100vw;
+        flex-direction: column;
+        height: 150vh;
+        width: 100%;
     }
 
     .sectionOne-upleft {
-        background: coral;
+        background: #eaeaea;
         height: 50%;
-        width: 50%;
+        width: 100%;
+    }
+
+    .upleft-img {
+        background: url(../../images/time-control.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
     }
 
     .sectionOne-upright {
-        background: cornflowerblue;
+        background: #ff2e63;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
-        width: 50%;
+        width: 100%;
     }
 
     .sectionOne-downleft {
         background: cornsilk;
         height: 50%;
-        width: 50%;
+        width: 100%;
     }
 
     .sectionOne-downright {
         background: crimson;
         height: 50%;
-        width: 50%;
+        width: 100%;
+    }
+
+    .downright-img {
+        background: url(../../images/time-management.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
     }
 
     .sectionTwo {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
     }
 
     .sectionTwo-up {
@@ -123,47 +228,88 @@
 
     .homeContainer {
         height: 91vh;
-        width: 100vw;
+        width: 100%;
+    }
+
+    .coverImage {
+        background:  url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-bottom: black solid 1px;
+        height: 100%;
+        width: 100%;
     }
 
     .sectionOne {
         display: flex;
         flex-wrap: wrap;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
     }
 
     .sectionOne-upleft {
-        background: coral;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
         width: 50%;
+        
+    }
+
+    .upleft-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: 20%;
+        height: 90%;
+        width: 90%;
     }
 
     .sectionOne-upright {
-        background: cornflowerblue;
+        background: #ff2e63;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
         width: 50%;
     }
 
     .sectionOne-downleft {
-        background: cornsilk;
+        background: #ff2e63;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
         width: 50%;
     }
 
     .sectionOne-downright {
-        background: crimson;
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 50%;
         width: 50%;
     }
 
+    .downright-img {
+        background: url(../../images/time-management.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 90%;
+        width: 60%;
+    }
+
     .sectionTwo {
         height: 100vh;
-        width: 100vw;
+        width: 100%;
     }
 
     .sectionTwo-up {
-        background: black;
+        background: #252a34;
+        border-bottom: red solid 1px;
         height: 22.5%;
         width: 100%;
     }
@@ -177,20 +323,36 @@
     }
 
     .sectionTwo-down {
-        background: black;
+        background: #252a34;
+        border-top: red solid 1px;
         height: 22.5%;
         width: 100%;
     }
 
     .midleft-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: underline #ff2e63;
         height: 100%;
         width: 40%;
     }
 
     .midright-image {
-        background: yellow;
+        background: url(../../images/remote.jpg);
+        border: red solid 1px;
+        background-size: cover;
+        background-repeat: no-repeat;
         height: 120%;
         width: 60%;
         margin: -3% 0% 0% -3%;
+    }
+
+    p {
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+        padding: 4%;
+        font-family: 'Nanum Gothic', sans-serif;
+        background: #eaeaea;
     }
 }

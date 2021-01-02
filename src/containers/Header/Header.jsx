@@ -16,7 +16,7 @@ const Header = ( ) => {
         
         <div className="headerContainer">
             <div className="headerLogo"><a className="logoLink" href="/">TIMERX</a></div>
-            <div className="nullSpace1"><h1>Header</h1></div>
+            <div className="nullSpace1"><h1>Controla el tiempo...</h1></div>
             <Navbar />
         </div>
     )

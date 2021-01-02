@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 // BREAKPOINT PARA DISPOSITIVOS PORTATILES
 // Estilos para dispositivos moviles de hasta 1024px
 @media only screen and (max-width: 1024px) {
@@ -12,7 +14,7 @@
     }
 
     .navMenu {
-        background: #ffd369;
+        background: #eaeaea;
         height: 100vh;
         width: 100vw;
         position: fixed;
@@ -22,7 +24,7 @@
     }
 
     .navMenu-active {
-        background: #ffd369;
+        background: #eaeaea;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -54,7 +56,8 @@
     }
 
     .navItem-data {
-        color: #393e46;
+        font-family: 'Roboto', sans-serif;
+        color: #252a34;
         display: flex;
         justify-content: center;
         text-decoration: none;
@@ -97,7 +100,8 @@
     }
 
     .navItem-data {
-        color: #ffd369;
+        font-family: 'Roboto', sans-serif;
+        color: #252a34;
         display: flex;
         justify-content: center;
         align-items: flex-end;
@@ -107,6 +111,7 @@
     }
 
     .navItem-data:hover {
-        color: #eeeeee;
+        color: #ff2e63;
+        border-bottom: #ff2e63 solid 2px;
     }
 }
