@@ -15,10 +15,11 @@ const Profile = ( ) => {
     return (
 
         <div className='profileContainer'>
-            <div className="nullProfile1"></div>
-            <div className="controlPanel">
+              <div className="controlPanel">
                 <Manage />
             </div>
+            {/*<div className="nullProfile1"></div>*/}
+          
         </div>
 
     )

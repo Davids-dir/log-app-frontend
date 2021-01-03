@@ -1,0 +1,29 @@
+// Estilos para dispositivos moviles
+@media only screen and (max-width: 768px) {
+
+    .footer-container {
+        background: red;
+        min-height: 5vh;
+        min-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .footer-container {
+        background: violet;
+        min-height: 5vh;
+        min-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .footer-container {
+        background: yellowgreen;
+        min-height: 5vh;
+        min-width: 100%;
+    }
+}

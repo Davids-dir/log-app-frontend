@@ -1,9 +1,5 @@
 export const menuData = [
     {
-        title: 'Inicio',
-        path: '/'
-    },
-    {
         title: 'Acceso',
         path: '/login'
     },

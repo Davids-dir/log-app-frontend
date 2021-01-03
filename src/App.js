@@ -22,9 +22,7 @@ function App() {
         <Route path='/login' component={Login} exact />
         <Route path='/register' component={Register} exact />
         <Route path='/user/profile' component={Profile} exact />
-
-
-      </Switch>
+      </ Switch>
       <Footer />
 
     </BrowserRouter>

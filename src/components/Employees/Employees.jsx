@@ -74,12 +74,27 @@ const Manage = () => {
     return (
 
         <div className='manageContainer' >
-            <div className="buttonContainer1">
-                <button className='buttonManage' type='button' onClick={eventRoster}>Gestionar empleados</button>
+            <div>
+                <div className="buttonContainer1">
+                    <button className='buttonManage' type='button' onClick={eventRoster}>Gestionar empleados</button>
+                </div>
             </div>
 
             {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
             { showMenu ?
+            
+                <div>
+                    <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
+                    <Link to='#' onClick={eventModify}>Modificar un empleado</Link>
+                    <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>
+                </div>
+                :
+                <></>
+            }
+        
+            {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
+            {/*{ showMenu ?
+            
                 <div className="manageRoster">
 
                     <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
@@ -117,7 +132,7 @@ const Manage = () => {
                         :
                         <></>
                     }
-                    <Link to='#' onClick={eventModify}>Modificar un empleado</Link>
+                   {/* <Link to='#' onClick={eventModify}>Modificar un empleado</Link>*/}
 
                     {/* Muestra nuevamente un formulario para modificar los campos del empleado si fuese necesario */}
                     {modifyEntry ?
@@ -152,7 +167,7 @@ const Manage = () => {
                         :
                         <></>
                     }
-                    <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>
+                    {/*  <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>*/}
 
                     {/* Muestra una barra de busqueda para localizar el empleado que queremos dar de baja en la DB */}
                     {deleteEntry ?
@@ -166,11 +181,11 @@ const Manage = () => {
                         <></>
                     }
                 </div>
-                :
-                <></>
-            }
+              //  :
+              //  <></>
+            //}
 
-        </div>
+        //</div>
 
     )
 }
