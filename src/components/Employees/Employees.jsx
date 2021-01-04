@@ -78,64 +78,59 @@ const Manage = () => {
                 <div className="buttonContainer1">
                     <button className='buttonManage' type='button' onClick={eventRoster}>Gestionar empleados</button>
                 </div>
+
+
+                {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
+                {showMenu ?
+
+                    <div>
+                        <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
+                        <Link to='#' onClick={eventModify}>Modificar un empleado</Link>
+                        <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>
+                    </div>
+                    :
+                    <></>
+                }
             </div>
 
-            {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
-            { showMenu ?
-            
-                <div>
-                    <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
-                    <Link to='#' onClick={eventModify}>Modificar un empleado</Link>
-                    <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>
-                </div>
-                :
-                <></>
-            }
-        
-            {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
-            {/*{ showMenu ?
-            
-                <div className="manageRoster">
+            <div id='contenedor'>
 
-                    <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
+                {newEntry ?
+                    <div className="newEntry">
+                        <form className="formEntry">
+                            <label htmlFor="">Nombre</label>
+                            <input type="text" name="name" onChange={handleEvent} />
+                            <label htmlFor="">Apellidos</label>
+                            <input type="text" name="last_name" onChange={handleEvent} />
+                            <label htmlFor="">Correo electrónico</label>
+                            <input type="mail" name="email" onChange={handleEvent} />
+                            <label htmlFor="">Contraseña</label>
+                            <input type="password" name="password" onChange={handleEvent} />
+                            <label htmlFor="">Departamento</label>
+                            <select id="department" name="department" onChange={handleEvent}>
+                                <option value="" defaultValue hidden>Selecciona el departamento</option>
+                                <option value="administration">Administración</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="production">Producción</option>
+                                <option value="logistics">Logística</option>
+                            </select>
+                            <label htmlFor="">Tipo de contrato</label>
+                            <select id="contract" name="contract" onChange={handleEvent}>
+                                <option value="" defaultValue hidden>Selecciona el tipo de jornada</option>
+                                <option value="full_time">Jornada Completa - 40h/semanales</option>
+                                <option value="half_time">Media Jornada - 20h/semanales</option>
+                                <option value="practices">Practicas - 8h/semanales</option>
+                            </select>
+                        </form>
+                        <button className="sendButton" type="submit" onClick={() => updateData()}>Enviar</button>
+                    </div>
+                    :
+                    <></>
+                }
 
-                    {/* Mostramos un formulario de Registro en caso de que se quiera dar de alta un nuevo empleado */}
-                    {newEntry ?
-                        <div className="newEntry">
-                            <form className="formEntry">
-                                <label htmlFor="">Nombre</label>
-                                <input type="text" name="name" onChange={handleEvent} />
-                                <label htmlFor="">Apellidos</label>
-                                <input type="text" name="last_name" onChange={handleEvent} />
-                                <label htmlFor="">Correo electrónico</label>
-                                <input type="mail" name="email" onChange={handleEvent} />
-                                <label htmlFor="">Contraseña</label>
-                                <input type="password" name="password" onChange={handleEvent} />
-                                <label htmlFor="">Departamento</label>
-                                <select id="department" name="department" onChange={handleEvent}>
-                                    <option value="" defaultValue hidden>Selecciona el departamento</option>
-                                    <option value="administration">Administración</option>
-                                    <option value="marketing">Marketing</option>
-                                    <option value="production">Producción</option>
-                                    <option value="logistics">Logística</option>
-                                </select>
-                                <label htmlFor="">Tipo de contrato</label>
-                                <select id="contract" name="contract" onChange={handleEvent}>
-                                    <option value="" defaultValue hidden>Selecciona el tipo de jornada</option>
-                                    <option value="full_time">Jornada Completa - 40h/semanales</option>
-                                    <option value="half_time">Media Jornada - 20h/semanales</option>
-                                    <option value="practices">Practicas - 8h/semanales</option>
-                                </select>
-                            </form>
-                            <button className="sendButton" type="submit" onClick={() => updateData()}>Enviar</button>
-                        </div>
-                        :
-                        <></>
-                    }
-                   {/* <Link to='#' onClick={eventModify}>Modificar un empleado</Link>*/}
-
-                    {/* Muestra nuevamente un formulario para modificar los campos del empleado si fuese necesario */}
-                    {modifyEntry ?
+                {/* Muestra nuevamente un formulario para modificar los campos del empleado si fuese necesario */}
+                {
+                    modifyEntry ?
                         <div className="newEntry">
                             <form className="formEntry">
                                 <label htmlFor="">Nombre</label>
@@ -166,11 +161,12 @@ const Manage = () => {
                         </div>
                         :
                         <></>
-                    }
-                    {/*  <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>*/}
+                }
 
-                    {/* Muestra una barra de busqueda para localizar el empleado que queremos dar de baja en la DB */}
-                    {deleteEntry ?
+
+                {/* Muestra una barra de busqueda para localizar el empleado que queremos dar de baja en la DB */}
+                {
+                    deleteEntry ?
                         <div className="deleteEntry">
                             <div className="searchContainer">
                                 <input className="searchInput" type="text" name="name" placeholder="Introduce el nombre completo..." onChange={handleSearch} />
@@ -179,13 +175,15 @@ const Manage = () => {
                         </div>
                         :
                         <></>
-                    }
-                </div>
-              //  :
-              //  <></>
-            //}
+                }
 
-        //</div>
+
+            </div>
+
+
+        </div>
+
+
 
     )
 }
