@@ -8,30 +8,29 @@
 // Estilos para dispositivos de como minimo 1024px
 @media only screen and (min-width: 1024px) {
     
-    .profileContainer {
+    .profile-container {
         display: flex;
         flex-direction: column;
         //align-items: center;
         background: blueviolet;
-        height: 100vh;
-        width: 100vw;
+        min-height: 81vh;
+        min-width: 100%;
+    }
+    
+    .control-panel {
+        background: white;
+        min-height: 81vh;
+        min-width: 100%;
     }
 
     .nullProfile1 {
-        background: burlywood;
-        height: 10vh;
-        width: 100vw;
+        background: white;
+        min-height: 7.5vh;
+        min-width: 100%;
     }
 
-    
-    .controlPanel {
-        background: yellow;
-        border: black solid 0.1em;
-        //height: 80%;
-        //width: 50%;
-
-        height: 100%;
-        width: 100%;
+    .option-panel {
+        min-height: 73.5vh;
+        min-width: 100%;
     }
-
 }

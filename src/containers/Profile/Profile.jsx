@@ -8,18 +8,22 @@ import './Profile.scss'
 
 
 // Contenedor Profile
-const Profile = ( ) => {
+const Profile = () => {
 
 
 
     return (
 
-        <div className='profileContainer'>
-              <div className="controlPanel">
+        <div className='profile-container'>
+            <div className="control-panel">
+                <div className="nullProfile1"></div>
+                <div className="option-panel">
                 <Manage />
+                </div>
+                <div className="data-panel"></div>
+                
             </div>
-            {/*<div className="nullProfile1"></div>*/}
-          
+
         </div>
 
     )

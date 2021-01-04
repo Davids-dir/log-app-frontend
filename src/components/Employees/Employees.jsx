@@ -1,11 +1,11 @@
 // Importo las dependencias necesarias
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 
 // Importo la hoja de estilos
 import './Employees.scss';
+import FormPage from '../RegisterForm/RegisterForm';
 
 
 // Componente para la gestion de los empleados
@@ -36,13 +36,15 @@ const Manage = () => {
     const eventModify = () => setModifyEntry(!modifyEntry)
     const eventDelete = () => setDeleteEntry(!deleteEntry)
 
-    // Evento en el DOM
-    // Añado la informacion del EVENT TARGET sobre el objeto User
-    const handleEvent = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
 
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
     const handleSearch = e => { setSearch({ ...search, [e.target.name]: e.target.value }) }
 
+    // Evento en el DOM
+    // Añado la informacion del EVENT TARGET sobre el objeto User
+    const handleEvent = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
+    
+    
     // Función que emplea el POST hacia la DB para registrar un nuevo empleado
     const sendData = () => {
 
@@ -51,6 +53,7 @@ const Manage = () => {
             .then(res => res.data, { message: 'Empleado registrado correctamente' })
             .catch(error => (console.log(error)))
     };
+
 
     // Función que realiza un PUT para modificar/actualizar un empleadoe en la Base de datos
     const updateData = () => {
@@ -73,29 +76,38 @@ const Manage = () => {
 
     return (
 
-        <div className='manageContainer' >
-            <div>
-                <div className="buttonContainer1">
-                    <button className='buttonManage' type='button' onClick={eventRoster}>Gestionar empleados</button>
-                </div>
+        <div className='manage-container' >
 
-
-                {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
-                {showMenu ?
-
-                    <div>
-                        <Link to='#' onClick={eventNewEntry}>Registrar un empleado</Link>
-                        <Link to='#' onClick={eventModify}>Modificar un empleado</Link>
-                        <Link to='#' onClick={eventDelete}>Dar de baja un empleado</Link>
-                    </div>
-                    :
-                    <></>
-                }
+            <div className="button-container">
+                <button id='button-manage' type='button' onClick={eventRoster}>Gestionar empleados</button>
             </div>
 
-            <div id='contenedor'>
 
-                {newEntry ?
+            {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
+            {showMenu ?
+                <div className="options-container">
+                    <button className="button-admin" onClick={eventNewEntry}>Registrar un empleado</button>
+                    <button className="button-admin" onClick={eventModify}>Modificar un empleado</button>
+                    <button className="button-admin" onClick={eventDelete}>Dar de baja un empleado</button>
+                </div>
+                :
+                <></>
+            }
+
+
+
+            {/* DIV del registro de empleados */}
+            {newEntry ?
+                <div className="new-entry">
+                    <FormPage />
+                </div>
+                :
+                <></>
+            }
+
+            {/* Muestra nuevamente un formulario para modificar los campos del empleado si fuese necesario */}
+            {
+                modifyEntry ?
                     <div className="newEntry">
                         <form className="formEntry">
                             <label htmlFor="">Nombre</label>
@@ -122,66 +134,31 @@ const Manage = () => {
                                 <option value="practices">Practicas - 8h/semanales</option>
                             </select>
                         </form>
-                        <button className="sendButton" type="submit" onClick={() => updateData()}>Enviar</button>
+                        <button className="sendButton" type="submit" onClick={() => sendData()}>Enviar</button>
                     </div>
                     :
                     <></>
-                }
+            }
 
-                {/* Muestra nuevamente un formulario para modificar los campos del empleado si fuese necesario */}
-                {
-                    modifyEntry ?
-                        <div className="newEntry">
-                            <form className="formEntry">
-                                <label htmlFor="">Nombre</label>
-                                <input type="text" name="name" onChange={handleEvent} />
-                                <label htmlFor="">Apellidos</label>
-                                <input type="text" name="last_name" onChange={handleEvent} />
-                                <label htmlFor="">Correo electrónico</label>
-                                <input type="mail" name="email" onChange={handleEvent} />
-                                <label htmlFor="">Contraseña</label>
-                                <input type="password" name="password" onChange={handleEvent} />
-                                <label htmlFor="">Departamento</label>
-                                <select id="department" name="department" onChange={handleEvent}>
-                                    <option value="" defaultValue hidden>Selecciona el departamento</option>
-                                    <option value="administration">Administración</option>
-                                    <option value="marketing">Marketing</option>
-                                    <option value="production">Producción</option>
-                                    <option value="logistics">Logística</option>
-                                </select>
-                                <label htmlFor="">Tipo de contrato</label>
-                                <select id="contract" name="contract" onChange={handleEvent}>
-                                    <option value="" defaultValue hidden>Selecciona el tipo de jornada</option>
-                                    <option value="full_time">Jornada Completa - 40h/semanales</option>
-                                    <option value="half_time">Media Jornada - 20h/semanales</option>
-                                    <option value="practices">Practicas - 8h/semanales</option>
-                                </select>
-                            </form>
-                            <button className="sendButton" type="submit" onClick={() => sendData()}>Enviar</button>
+
+            {/* Muestra una barra de busqueda para localizar el empleado que queremos dar de baja en la DB */}
+            {
+                deleteEntry ?
+                    <div className="deleteEntry">
+                        <div className="searchContainer">
+                            <input className="searchInput" type="text" name="name" placeholder="Introduce el nombre completo..." onChange={handleSearch} />
+                            <button className="searchButton" type="submit" onClick={() => getData()}>Buscar</button>
                         </div>
-                        :
-                        <></>
-                }
-
-
-                {/* Muestra una barra de busqueda para localizar el empleado que queremos dar de baja en la DB */}
-                {
-                    deleteEntry ?
-                        <div className="deleteEntry">
-                            <div className="searchContainer">
-                                <input className="searchInput" type="text" name="name" placeholder="Introduce el nombre completo..." onChange={handleSearch} />
-                                <button className="searchButton" type="submit" onClick={() => getData()}>Buscar</button>
-                            </div>
-                        </div>
-                        :
-                        <></>
-                }
-
-
-            </div>
+                    </div>
+                    :
+                    <></>
+            }
 
 
         </div>
+
+
+
 
 
 

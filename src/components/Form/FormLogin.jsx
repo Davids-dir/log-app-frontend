@@ -4,10 +4,10 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 // Estilos
-import './Form.scss';
+import './FormLogin.scss';
 
 
-const InputPage = () => {
+const FormLogin = () => {
 
     // Hook de estado
     const [user, setUser] = useState({ email: '', password: '', })
@@ -57,10 +57,10 @@ const InputPage = () => {
                     <MDBInput label="Contraseña" size="lg" name="password" type="password" onChange={eventHandler} />
                 </div>
                 
-                <button type="button" onClick={() => SendData()}>Login</button>
+                <button id="form-button" type="button" onClick={() => SendData()}>Login</button>
             </div>
         </div>
     );
 }
 
-export default InputPage;
+export default FormLogin;

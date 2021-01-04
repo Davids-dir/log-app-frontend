@@ -9,7 +9,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 // Importo la hoja de estilos
 import './Login.scss';
-import InputPage from '../../components/Form/Form';
+import FormLogin from '../../components/Form/FormLogin';
 
 
 // Logica del contenedor LOGIN
@@ -18,7 +18,7 @@ const Login = () => {
     return (
         <div className="loginContainer">
             <form className="formContainer">
-                <InputPage />
+                <FormLogin />
             </form>
         </div>
     )
