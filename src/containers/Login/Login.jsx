@@ -9,7 +9,7 @@ import 'mdbreact/dist/css/mdb.css';
 
 // Importo la hoja de estilos
 import './Login.scss';
-import FormLogin from '../../components/Form/FormLogin';
+import FormLogin from '../../components/FormLogin/FormLogin';
 
 
 // Logica del contenedor LOGIN

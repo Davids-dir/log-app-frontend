@@ -4,9 +4,9 @@ import axios from 'axios';
 import { useHistory } from "react-router-dom";
 
 // Estilos
-import './RegisterForm.scss';
+import './ModifyForm.scss';
 
-const FormPage = () => {
+const Modify = () => {
 
     // Hook de registro
     const [user, setUser] = useState({
@@ -24,27 +24,26 @@ const FormPage = () => {
     // Añado la informacion del EVENT TARGET sobre el objeto User
     const handleEvent = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
 
-    // Función que emplea el POST hacia la DB para registrar un nuevo empleado
-    const sendData = () => {
+    // Función que emplea el POST hacia la DB para modificar los datos de un empleado
+    const updateData = () => {
 
-        axios.post('http://localhost:8000/api/user/register', user)
+        axios.put('http://localhost:8000/api/user/update', user)
 
             .then(res => {
 
                 setTimeout(() => {
                     redirect.push('/')
                 }, 1500)
-
             })
-            .catch(error => (console.log(error)))
-    };
+            .catch(error => console.log(error))
+    }
 
     return (
         <MDBContainer>
             <MDBRow>
                 <MDBCol md="12">
                     <form id="register-form" className="register-form">
-                        <p id="form-title" className="h5 text-center mb-4">Nuevo empleado</p>
+                        <p id="form-title" className="h5 text-center mb-4">Modificar empleado</p>
                         <label htmlFor="name" className="grey-text">Nombre</label>
                         <input type="text" name="name" id="defaultFormRegisterNameEx" className="form-control" onChange={handleEvent} />
                         <br />
@@ -75,7 +74,7 @@ const FormPage = () => {
                         </select>
                     </form>
                     <div className="text-center mt-4">
-                        <button className="register-button" type="submit" onClick={() => sendData()}>Registrar</button>
+                        <button className="register-button" type="submit" onClick={() => updateData()}>Modificar</button>
                     </div>
                 </MDBCol>
             </MDBRow>
@@ -83,4 +82,4 @@ const FormPage = () => {
     );
 };
 
-export default FormPage;
+export default Modify;

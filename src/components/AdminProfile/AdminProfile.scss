@@ -62,4 +62,23 @@
         min-height: 30vh;
         min-width: 70%;
     }
+
+    .update-entry {
+        min-height: 30vh;
+        min-width: 70%;
+    }
+
+    .delete-entry {
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+        min-width: 70%;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+        min-width: 70%;
+    }
 }
