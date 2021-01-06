@@ -22,7 +22,7 @@ const FormLogin = () => {
 
         axios.get('https://api.ipify.org?format=json')
 
-            .then(res => localStorage.setItem('user_IP', JSON.stringify(res.data)))
+            .then(res => localStorage.setItem('ip_direction', JSON.stringify(res.data)))
             .catch(error => { console.log(error) })
 
     }

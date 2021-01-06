@@ -32,38 +32,56 @@ const UserProfile = () => {
 
     // Creo una variable cogiendo la información del LOCAL STORAGE sobre el trabajador que hace LOGIN  
     const user = JSON.parse(localStorage.getItem('user'));
+    const ip_direction = JSON.parse(localStorage.getItem('ip_direction'));
+
 
 
     // Funcion cuando un empleado inicia su jornada de trabajo
     const dbStartWork = () => {
 
-        axios.post('http://localhost:8000/api/log/start/' + user.user.id)
+        axios.post('http://localhost:8000/api/log/start/' + user.user.id, ip_direction)
 
-            .then(res => res.data)
+            .then((response) => {
+                localStorage.setItem('start_res', JSON.stringify(response.data))
+            })
             .catch(error => console.log(error))
     }
 
-
+    const data_logStart = JSON.parse(localStorage.getItem('start_res'));
 
     return (
         <div className="user-container">
             <div className='user-panel'>
                 <div className="top-panel">
-                    <div className="user-name">Bienvenido {user.user.name} {user.user.last_name}</div>
+                    <div className="user-name">{user.user.name} {user.user.last_name}</div>
                     <div className="user-date"><Moment format="dddd DD MMMM yyyy" /></div>
                 </div>
-                {startButton ?
-                    <div className="start-button-container" onClick={changeButton}>
-                        <button className="start-log" type="submit" onClick={dbStartWork}>INICIO</button>
+                <div className="operation-panel">
+                    <div className="left-panel-buttons">
+                        {startButton ?
+                            <div className="start-button-container" onClick={changeButton}>
+                                <button className="start-log" type="submit" onClick={dbStartWork}>INICIO</button>
+                            </div>
+                            :
+                            null}
+                        {stopButton ?
+                            <div className="working-container">
+                                <div className="stop-button-container" onClick={changeButton}>
+                                    <button type="submit" className="stop-log">STOP</button>
+                                </div>
+                                <div className="pause-button-container">
+                                    <button className="pause-log">DESCANSO</button>
+                                </div>
+                            </div>
+                            :
+                            null}
                     </div>
-                    :
-                    null}
-                {stopButton ?
-                    <div onClick={changeButton}>
-                        <button>STOP</button>
+                    <div className="info-panel">
+                        <div className="data-container">
+                            <div className="start-info-panel">{data_logStart ? data_logStart.message : null } a las {data_logStart ? data_logStart.hora : null }</div>
+                        </div>
                     </div>
-                    :
-                    null}
+                </div>
             </div>
         </div>
     )
