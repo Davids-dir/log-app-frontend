@@ -1,0 +1,144 @@
+// Fuente
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+// Estilos para dispositivos moviles
+@media only screen and (max-width: 768px) {
+
+    .footer-container {
+        background: #252a34;
+        min-height: 8vh;
+        min-width: 100%;
+    }
+
+    .upper-footer {
+        background: #252a34;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 7.5vh;
+        min-width: 100%;
+    }
+
+    #footer-icons {
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        min-height: 5vh;
+        min-width: 10%;
+        a{
+            color: #eaeaea;
+        }
+
+        svg {
+            height: 2em;
+            width: 2em;
+        }
+    }
+
+    .lower-footer {
+        color: #eaeaea;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 2.5vh;
+        min-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+
+    .footer-container {
+        background: #252a34;
+        min-height: 10vh;
+        min-width: 100%;
+    }
+
+    .upper-footer {
+        background: #252a34;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 7.5vh;
+        min-width: 100%;
+    }
+
+    #footer-icons {
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        min-height: 5vh;
+        min-width: 5%;
+        a{
+            color: #eaeaea;
+        }
+
+        svg {
+            height: 2em;
+            width: 2em;
+        }
+    }
+
+    .lower-footer {
+        color: #eaeaea;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 2.5vh;
+        min-width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+    .footer-container {
+        background: #252a34;
+        max-height: 10vh;
+        min-width: 100%;
+    }
+
+    .upper-footer {
+        background: #252a34;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        min-height: 7.5vh;
+        min-width: 100%;
+    }
+
+    #footer-icons {
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        min-height: 5vh;
+        min-width: 5%;
+        a{
+            color: #eaeaea;
+        }
+
+        svg {
+            height: 2em;
+            width: 2em;
+        }
+    }
+
+
+    .lower-footer {
+        color: #eaeaea;
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 2.5vh;
+        min-width: 100%;
+    }
+}

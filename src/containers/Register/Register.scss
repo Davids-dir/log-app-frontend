@@ -1,0 +1,29 @@
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+}
+
+// BREAKPOINT PARA TABLETS Y ORDENADORES
+// Estilos para dispositivos como minimo de 1024px
+@media only screen and (min-width: 1024px) {
+
+    .registerContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .formContainer {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+        width: 35%;
+    }
+
+    button {
+        height: 5%;
+        width: 15%;
+    }
+}

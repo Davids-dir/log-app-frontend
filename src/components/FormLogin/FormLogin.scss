@@ -1,0 +1,32 @@
+.form-group {
+    background: #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    min-height: 30vh;
+    min-width: 30vw;
+}
+
+.inside-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    min-width: 30vw;
+}
+
+#form-login {
+    min-height: 10vh;
+    min-width: 22.5vw;
+}
+
+#form-button {
+    background-color: #252a34;
+    color: #eaeaea;
+    border: none;
+    border-radius: 10px;
+    min-height: 3.5vh;
+    min-width: 7.5vw;
+}

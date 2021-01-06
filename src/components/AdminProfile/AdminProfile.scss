@@ -1,0 +1,84 @@
+// BREAKPOINT PARA DISPOSITIVOS MOVILES
+// Estilos para dispositivos de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+}
+
+// BREAKPOINT PARA TABLETS Y ORDENADORES
+// Estilos para dispositivos como minimo de hasta 1024px
+@media only screen and (min-width: 1024px) {
+
+    .manage-container {
+        display: flex;
+        flex-direction: row;
+        min-height: 66vh;
+        min-width: 100%;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 15vh;
+        min-width: 15%;
+    }
+
+    #button-manage {
+        background: #ff2e63;
+        color: white;
+        border: #252a34 solid 1px;
+        border-radius: 4px;
+        min-height: 35%;
+        min-width: 60%;
+    }
+
+    .options-container {
+        background: #eaeaea;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: #252a34 solid 1px;
+        border-radius: 6px;
+        max-height: 35vh;
+        min-width: 11.5%;
+    }
+
+    .button-admin {
+        background: #ff2e63;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: #252a34 solid 1px;
+        border-radius: 4px;
+        margin-top: 1.5vh;
+        margin-bottom: 1.5vh;
+        min-height: 20%;
+        min-width: 60%;
+    }
+
+    .new-entry {
+        min-height: 30vh;
+        min-width: 70%;
+    }
+
+    .update-entry {
+        min-height: 30vh;
+        min-width: 70%;
+    }
+
+    .delete-entry {
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+        min-width: 70%;
+    }
+
+    .search-container {
+        display: flex;
+        justify-content: center;
+        min-height: 30vh;
+        min-width: 70%;
+    }
+}

@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap');
+
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos moviles de hasta 1024px
+@media only screen and (max-width: 1024px) {
+
+    // Contenedor principal
+    .headerContainer {
+        background-color: #eaeaea;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: #ff2e63 solid 2px;
+        height: 12vh;
+        width: 100%;
+    }
+
+    // Contenedor del logo
+    .headerLogo {
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5%;
+        height: 50%;
+        width: 15%;
+    }
+    
+    .logoLink {
+       color:#252a34;
+       text-decoration: none;
+   }
+
+    // Caja vacia
+    .nullSpace1 {
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 60%;
+    }
+
+    h1 {
+        font-size: large;
+    }
+};
+
+// BREAKPOINT PARA TABLETS APAISADAS Y ORDENADORES
+// Estilos para dispositivos como minimo de 1024px
+    @media only screen and (min-width: 1024px) {
+    .headerContainer {
+        background-color:  #eaeaea;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: #ff2e63 solid 2px;
+        height: 9vh;
+        width: 100%;
+    }
+
+    .headerLogo {
+        font-family: 'Roboto', sans-serif;
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 10%;
+        margin-left: 5%;
+        
+    }
+    
+    .logoLink {
+        color: #252a34;
+        font-size: large;
+        text-decoration: none;
+    }
+
+    .nullSpace1 {
+        background:  #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 40%;
+    }
+
+    h1 {
+        color: #252a34;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+}

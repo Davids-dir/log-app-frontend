@@ -1,0 +1,118 @@
+// Tipos de fuente
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// BREAKPOINT PARA DISPOSITIVOS PORTATILES
+// Estilos para dispositivos moviles de hasta 1024px
+@media only screen and (max-width: 1024px) {
+    
+    .navContainer {
+        background: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 15%;
+    }
+
+    .navMenu {
+        background: #eaeaea;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        top: -100%;
+        left: 0;
+        transition: 500ms;
+    }
+
+    .navMenu-active {
+        background: #eaeaea;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 500ms;
+    }
+
+    .navLogo-open {
+        font-size: x-large;
+    }
+
+    .navLogo-close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        height: 20%;
+        width: 100%;
+    }
+
+    .navItems {
+        background: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 60%;
+        width: 100%;
+    }
+
+    .navItem-data {
+        font-family: 'Roboto', sans-serif;
+        color: #252a34;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        font-size: x-large;
+        height: 20%;
+        width: 100%;
+    }
+
+    .navDesktop {
+        display: none;
+    }
+}
+
+// BREAKPOINT PARA TABLETS Y ORDENADORES
+// Estilos para dispositivos como minimo con 1024px
+@media only screen and (min-width: 1024px) {
+
+    .navContainer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 40%;
+    }
+
+    .navLogo-open {
+        display: none;
+    }
+
+    .navMenu {
+        display: none;
+    }
+
+    .navDesktop {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+    }
+
+    .navItem-data {
+        font-family: 'Roboto', sans-serif;
+        color: #252a34;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        text-decoration: none;
+        height: 30%;
+        width: 20%;
+    }
+
+    .navItem-data:hover {
+        color: #ff2e63;
+        border-bottom: #ff2e63 solid 2px;
+    }
+}

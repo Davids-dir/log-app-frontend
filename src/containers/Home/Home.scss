@@ -1,0 +1,557 @@
+// Fuentes empleadas
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+// BREAKPOINT PARA DISPOSITIVOS MOVILES
+// Estilos para dispositivos de hasta 768px
+@media only screen and (max-width: 768px) {
+
+    .home-container {
+        min-height: 86vh;
+        min-width: 100%;
+    }
+
+    // Imagen central de la aplicación
+    .cover-image {
+        background: url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 36vh;
+        min-width: 100%;
+        border-bottom: black solid 1px;
+    }
+
+    // Primera sección o Section One
+    .section-one {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    // Para version móvil no mostramos este DIV para no sobrecargarlo
+    .section-one-upright {
+        display: none;
+    }
+
+    .section-one-downleft {
+        background: #ff2e63;
+        min-height: 65vh;
+        min-width: 100%;
+        border-bottom: black solid 1px;
+    }
+
+    // Estilos para el parrafo descriptivo
+    p {
+        background: #eaeaea;
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 4%;
+        border-bottom: black solid 1px;
+    }
+
+    // Contenedor de la imagen
+    .section-one-downright {
+        min-height: 35vh;
+        min-width: 100%;
+        border-bottom: black solid 1px;
+    }
+
+    .downright-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 35vh;
+        min-width: 100%;
+    }
+
+    // Segunda sección o Section Two
+    .section-two {
+        min-height:  65vh;
+        min-width: 100%;
+    }
+
+    .section-two-up {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 15px;
+    }
+
+    .section-two-mid {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-height: 40vh;
+        min-width: 100%;
+    }
+
+    .section-two-down {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+    }
+}
+
+// BREAKPOINT PARA TABLETS
+// Estilos para pantallas como minimo de 768px en adelante
+@media only screen and (min-width: 768px) {
+
+    .home-container {
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Imagen central de la aplicación
+    .cover-image {
+        background: url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 50vh;
+        min-width: 100%;
+    }
+
+    // Primera sección o Section One
+    .section-one {
+        background:  #ff2e63;
+        min-height: 75vh;
+        min-width: 100%;
+    }
+
+    // Para version móvil no mostramos este DIV para no sobrecargarlo
+    .section-one-upright {
+        display: none;
+    }
+
+    .section-one-downleft {
+        background: #ff2e63;
+        min-height: 34vh;
+        min-width: 100%;
+        border: none;
+    }
+
+    // Estilos para el parrafo descriptivo
+    p {
+        background: #eaeaea;
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 4%;
+        border-bottom: black solid 1px;
+    }
+
+    // Contenedor de la imagen
+    .section-one-downright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 45vh;
+        min-width: 100%;
+        border: none;
+    }
+
+    .downright-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 37vh;
+        min-width: 63%;
+    }
+
+    // Segunda sección o Section Two
+    .section-two {
+        min-height:  75vh;
+        min-width: 100%;
+    }
+
+    .section-two-up {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+        border-bottom: #ff2e63 solid 1px;
+    }
+
+    .section-two-mid {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 100%;
+    }
+
+    .section-two-down {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 1px;
+    }
+}
+
+// BREAKPOINT PARA MOVILES APAISADOS
+// Estilos para pantallas como minimo de 812px
+@media only screen and (min-width: 812px) {
+
+    .home-container {
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Imagen central de la aplicación
+    .cover-image {
+        background: url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 87.5vh;
+        min-width: 100%;
+        border-bottom: black solid 1px;
+    }
+
+    // Primera sección o Section One
+    .section-one {
+        background: #ff2e63;
+        min-height: 150vh;
+        min-width: 100%;
+    }
+
+    // Para version móvil no mostramos este DIV para no sobrecargarlo
+    .section-one-upright {
+        display: none;
+    }
+
+    .section-one-downleft {
+        background: #ff2e63;
+        min-height: 75vh;
+        min-width: 100%;
+        border: none;
+    }
+
+    // Estilos para el parrafo descriptivo
+    p {
+        background: #eaeaea;
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 4%;
+        border-bottom: black solid 1px;
+    }
+
+    // Contenedor de la imagen
+    .section-one-downright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 75vh;
+        min-width: 100%;
+    }
+
+    .downright-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 60vh;
+        min-width: 37%;
+    }
+
+    // Segunda sección o Section Two
+    .section-two {
+        min-height:  100vh;
+        min-width: 100%;
+    }
+
+    .section-two-up {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 1px;
+        border-bottom: #ff2e63 solid 1px;
+    }
+
+    .section-two-mid {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        min-height: 75vh;
+        min-width: 100%;
+    }
+
+    .section-two-down {
+        background: #252a34;
+        min-height: 12.5vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 1px;
+    }
+}
+
+// BREAKPOINT PARA TABLETS APAISADAS
+// Estilos para pantallas como minimo de 1024px en adelante
+@media only screen and (min-width: 1024px) {
+
+    .home-container {
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Imagen central de la aplicación
+    .cover-image {
+        background: url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Primera sección o Section One
+    .section-one {
+        display: grid;
+        grid: auto / auto auto;
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    // Para pantallas de 1024px mostramos cambiamos como se muestra la parte central
+    .section-one-upright {
+        display: block;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .section-one-upleft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .upleft-img {
+        background: url(../../images/time-control.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 37.5vh;
+        min-width: 75%;
+    }
+
+    .section-one-downleft {
+        background: #ff2e63;
+        min-height: 50vh;
+        min-width: 50%;
+        
+    }
+
+    // Estilos para el parrafo descriptivo
+    p {
+        background: #eaeaea;
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 4%;
+        border-bottom: black solid 1px;
+    }
+
+    // Contenedor de la imagen
+    .section-one-downright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .downright-img {
+        background: url(../../images/time-management.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        min-height: 37.5vh;
+        min-width: 68%;
+    }
+
+    .section-two {
+        min-height:  100vh;
+        min-width: 100%;
+    }
+
+    // Segunda sección o Section Two
+    .section-two {
+        min-height:  100vh;
+        min-width: 100%;
+    }
+
+    .section-two-up {
+        background: #252a34;
+        min-height: 15vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 1px;
+        border-bottom: #ff2e63 solid 1px;
+    }
+
+    .section-two-mid {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        max-height: 60vh;
+        min-width: 100%;
+    }
+
+    .midleft-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // min-height: 60vh;
+        min-width: 40%;
+    }
+
+    .midright-img {
+        background: url(../../images/remote.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 80vh;
+        min-width: 60%;
+    }
+
+    .section-two-down {
+        background: #252a34;
+        min-height: 15vh;
+        min-width: 100%;
+        border-top: #ff2e63 solid 1px;
+    }
+}
+
+    // BREAKPOINT PARA ORDENADORES
+// Estilos para pantallas como minimo de 1080px en adelante
+@media only screen and (min-width: 1080px) {
+
+    .home-container {
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Imagen central de la aplicación
+    .cover-image {
+        background: url(../../images/office-cover.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 91vh;
+        min-width: 100%;
+    }
+
+    // Primera sección o Section One
+    .section-one {
+        display: grid;
+        grid: auto / auto auto;
+        min-height: 100vh;
+        min-width: 100%;
+    }
+
+    // Para pantallas de 1024px mostramos cambiamos como se muestra la parte central
+    .section-one-upright {
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff2e63;
+        min-height: 50vh;
+        min-width: 50%;
+        border-bottom: black solid 1px;
+    }
+
+    .section-one-upleft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eaeaea;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .upleft-img {
+        background: url(../../images/time-control.jpg);
+        background-size: 750px 400px;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 37.5vh;
+        min-width: 75%;
+    }
+
+    .section-one-downleft {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #ff2e63;
+        min-height: 50vh;
+        min-width: 50%;
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+        
+    }
+
+    // Estilos para el parrafo descriptivo
+    p {
+        background: #eaeaea;
+        text-align: center;
+        font-family: 'Nanum Gothic', sans-serif;
+        padding: 4%;
+        border-top: black solid 1px;
+        border-bottom: black solid 1px;
+    }
+
+    // Contenedor de la imagen
+    .section-one-downright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #eaeaea;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .downright-img {
+        background: url(../../images/time-management.jpg);
+        background-size: 750px 350px;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 37.5vh;
+        min-width: 68%;
+    }
+
+    .section-two {
+        min-height:  80vh;
+        min-width: 100%;
+    }
+
+    .section-two-up {
+        background: #252a34;
+        max-height: 20vh;
+        min-width: 100%;
+    }
+
+    .section-two-mid {
+        max-height: 40vh;
+        min-width: 100%;
+    }
+
+    .midleft-text {
+        min-height: 40vh;
+        max-width: 40%;
+    }
+
+    h2 {
+        padding: 3%;
+    }
+
+    .mindright-img {
+        background: url(../../images/remote.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 40vh;
+        min-width: 60%;
+    }
+
+    .section-two-down {
+        background: #252a34;
+        max-height: 20vh;
+        min-width: 100%;
+    }
+}
