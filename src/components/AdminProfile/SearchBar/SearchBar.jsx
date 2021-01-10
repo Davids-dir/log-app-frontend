@@ -10,7 +10,7 @@ import './SearchBar.scss';
 // Componente de busqueda de empleados
 const SearchBar = () => {
 
-    // Hook de busqueda
+    // Hook de busqueda de un trabajador
     const [search, setSearch] = useState({ email: '' })
 
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
@@ -28,11 +28,6 @@ const SearchBar = () => {
             .catch(error => console.log(error))
     }
 
-    const showData = () => {
-        
-    }
-
-
     
     return (
         <MDBCol className="search-bar" md="6">
@@ -42,9 +37,6 @@ const SearchBar = () => {
             </form>
             <div className="button-container">
                 <button className="search-button" type="submit" onClick={() => getData()}>Buscar</button>
-            </div>
-            <div className="search-response">
-                
             </div>
         </MDBCol>
     );

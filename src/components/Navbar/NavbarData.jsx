@@ -1,10 +1,11 @@
 // Parte del componente en el que podemos agregar mas secciones en el NavBar
 // Importo las dependencias necesarias
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios';
 
 // Importo la hoja de estilos
 import './Navbar.scss';
+import { useHistory } from 'react-router-dom';
 
 
 const NavbarData = () => {
@@ -35,10 +36,7 @@ const NavbarData = () => {
         },
     ]
 
-    // Efecto para actualizar el estado del Navbar en caso de que se produzca un cambio del valor 'user'
-    useEffect(() => {
-
-    }, [user]);
+    const redirect = useHistory();
 
     // Funcion de Logout
     const logout = () => {
@@ -52,10 +50,15 @@ const NavbarData = () => {
             .then(response => {
                 localStorage.clear('user')
                 console.log(response.data)
+
+                setTimeout(() => {
+                    redirect.push('/')
+                    // window.location.href="/";
+                }, 1200);
+
             })
             .catch(error => console.log(error))
     }
-
 
     return (
 
