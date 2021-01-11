@@ -16,18 +16,20 @@ const UserProfile = () => {
     // Hooks
     const [startButton, setStartButton] = useState(true);
     const [stopButton, setStopButton] = useState(false);
+    const [inPauseButton, setInPauseButton] = useState(false);
 
 
     // Eventos en el DOM
     const startWork = () => setStartButton(!startButton);
     const stopWork = () => setStopButton(!stopButton);
-
+    const startPause = () => setInPauseButton(!inPauseButton);
 
     // Función para alternar los botones que vamos a mostrar empleando los eventos
     const changeButton = () => {
         stopWork()
         startWork()
     }
+
 
 
     // Creo una variable cogiendo la información del LOCAL STORAGE sobre el trabajador que hace LOGIN  
@@ -45,6 +47,36 @@ const UserProfile = () => {
                 localStorage.setItem('start_res', JSON.stringify(response.data))
             })
             .catch(error => console.log(error))
+    }
+
+    // Función para pausar la jornada de un empleado
+    const dbPauseWork = () => {
+
+        axios.put('http://localhost:8000/api/log/update.startpause/' + user.user.id)
+
+        .then((response) => {
+            localStorage.setItem('start_pause', JSON.stringify(response.data))
+            console.log(response.data)
+        })
+        .catch(error => console.log(error))
+    }
+
+    // Función para reanudar la pausa de un empleado
+    const dbPauseEnd = () => {
+
+        axios.put('http://localhost:8000/api/log/update.endpause/' + user.user.id)
+
+        .then((response) => {console.log(response.data)})
+        .catch(error => console.log(error))
+    }
+
+    // Función para terminar la jornada de un empleado
+    const dbStopWork = () => {
+
+        axios.put('http://localhost:8000/api/log/update.stop' + user.user.id)
+
+        .then((response) => {console.log(response.data)})
+        .catch(error => console.log(error))
     }
 
     const data_logStart = JSON.parse(localStorage.getItem('start_res'));
@@ -67,11 +99,15 @@ const UserProfile = () => {
                         {stopButton ?
                             <div className="working-container">
                                 <div className="stop-button-container" onClick={changeButton}>
-                                    <button type="submit" className="stop-log">STOP</button>
+                                    <button type="submit" className="stop-log" onClick={() => dbStopWork ()}>STOP</button>
                                 </div>
                                 <div className="pause-button-container">
-                                    <button className="pause-log">DESCANSO</button>
+                                    <button className="pause-log" onClick={() => dbPauseWork ()}>Inicio descanso</button>
                                 </div>
+                                {inPauseButton ? 
+                                null
+                                :
+                                null}
                             </div>
                             :
                             null}

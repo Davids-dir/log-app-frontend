@@ -14,7 +14,6 @@ const Navbar = () => {
 
     // Hook para cambiar el estado del Menu
     const [menu, setMenu] = useState(false);
-    const [user, setUser] = useState(false);
 
    
 

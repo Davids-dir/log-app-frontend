@@ -48,7 +48,7 @@ const NavbarData = () => {
             }
         })
             .then(response => {
-                localStorage.clear('user')
+                localStorage.clear()
                 console.log(response.data)
 
                 setTimeout(() => {

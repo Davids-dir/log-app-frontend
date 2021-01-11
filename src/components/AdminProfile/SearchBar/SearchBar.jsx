@@ -7,11 +7,13 @@ import { MDBCol, MDBIcon } from "mdbreact";
 import './SearchBar.scss';
 
 
+
 // Componente de busqueda de empleados
 const SearchBar = () => {
 
     // Hook de busqueda de un trabajador
     const [search, setSearch] = useState({ email: '' })
+    const [infoError, setInfoError] = useState('')
 
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
     const handleSearch = e => { setSearch({ ...search, [e.target.name]: e.target.value }) }
@@ -25,7 +27,10 @@ const SearchBar = () => {
             .then(response => {
                 localStorage.setItem('search_res', JSON.stringify(response.data))
             })
-            .catch(error => console.log(error))
+            .catch (error => {
+                console.log(error.response.data)
+                setInfoError(error.response.data)
+            })
     }
 
     
@@ -38,6 +43,11 @@ const SearchBar = () => {
             <div className="button-container">
                 <button className="search-button" type="submit" onClick={() => getData()}>Buscar</button>
             </div>
+            <div>{
+            infoError ? 
+            <div id="error-search">No hay ningun empleado con ese correo electrónico</div>
+            :
+            null }</div>
         </MDBCol>
     );
 }
