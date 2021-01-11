@@ -27,7 +27,7 @@ const Register = () => {
     // Función que emplea el POST hacia la DB para registrar un nuevo empleado
     const sendData = () => {
 
-        axios.post('http://localhost:8000/api/user/register', user)
+        axios.post('https://worklog-app-backend.herokuapp.com/api/user/register', user)
 
             .then(res => {
 

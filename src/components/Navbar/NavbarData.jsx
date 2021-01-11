@@ -42,7 +42,7 @@ const NavbarData = () => {
     const logout = () => {
 
         // POST para revocar el token del usuario
-        axios.post('http://localhost:8000/api/user/logout', user.user, { 
+        axios.post('https://worklog-app-backend.herokuapp.com/api/user/logout', user.user, { 
             headers: {
                 'Authorization': `Bearer ${user.token}`
             }

@@ -33,7 +33,7 @@ const AdminProfile = () => {
     // Función para eliminar a un empleado de la base de datos
     const deleteUser = () => {
 
-        axios.delete('http://localhost:8000/api/admin/delete/' + showUser.id)
+        axios.delete('https://worklog-app-backend.herokuapp.com/api/admin/delete/' + showUser.id)
             .then(res => (res.data))
             .catch(error => console.log(error))
     }

@@ -27,7 +27,7 @@ const Modify = () => {
     // Función que emplea el POST hacia la DB para modificar los datos de un empleado
     const updateData = () => {
 
-        axios.put('http://localhost:8000/api/user/update', user)
+        axios.put('https://worklog-app-backend.herokuapp.com/api/user/update', user)
 
             .then(res => {
 
