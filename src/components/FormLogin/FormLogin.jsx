@@ -33,7 +33,7 @@ const FormLogin = () => {
         getIP();
 
         // POST hacia el endpoint de Login
-        axios.post('http://localhost:8000/api/user/login', user)
+        axios.post('https://worklog-app-backend.herokuapp.com/api/user/login', user)
 
             .then(res => {
                 localStorage.setItem('user', JSON.stringify(res.data))

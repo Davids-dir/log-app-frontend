@@ -41,7 +41,7 @@ const UserProfile = () => {
     // Funcion cuando un empleado inicia su jornada de trabajo
     const dbStartWork = () => {
 
-        axios.post('http://localhost:8000/api/log/start/' + user.user.id, ip_direction)
+        axios.post('https://worklog-app-backend.herokuapp.com/api/log/start/' + user.user.id, ip_direction)
 
             .then((response) => {
                 localStorage.setItem('start_res', JSON.stringify(response.data))
@@ -52,7 +52,7 @@ const UserProfile = () => {
     // Función para pausar la jornada de un empleado
     const dbPauseWork = () => {
 
-        axios.put('http://localhost:8000/api/log/update.startpause/' + user.user.id)
+        axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.startpause/' + user.user.id)
 
         .then((response) => {
             localStorage.setItem('start_pause', JSON.stringify(response.data))
@@ -64,7 +64,7 @@ const UserProfile = () => {
     // Función para reanudar la pausa de un empleado
     const dbPauseEnd = () => {
 
-        axios.put('http://localhost:8000/api/log/update.endpause/' + user.user.id)
+        axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.endpause/' + user.user.id)
 
         .then((response) => {console.log(response.data)})
         .catch(error => console.log(error))
@@ -73,7 +73,7 @@ const UserProfile = () => {
     // Función para terminar la jornada de un empleado
     const dbStopWork = () => {
 
-        axios.put('http://localhost:8000/api/log/update.stop' + user.user.id)
+        axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.stop' + user.user.id)
 
         .then((response) => {console.log(response.data)})
         .catch(error => console.log(error))
