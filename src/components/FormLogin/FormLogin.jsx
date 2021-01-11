@@ -40,7 +40,8 @@ const FormLogin = () => {
 
                 setTimeout(() => {
                     redirect.push('/user/profile')
-                }, 1500)
+                    // window.location.href="/user/profile"
+                }, 1000)
 
             })
             .catch(error => console.log(error))

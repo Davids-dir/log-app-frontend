@@ -1,3 +1,8 @@
+.search-container {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
 .button-container {
     max-height: 15vh;
     min-width: 15%;
@@ -10,4 +15,9 @@
     border-radius: 10px;
     min-height: 3.5vh;
     min-width: 7.5vw;
+}
+
+#error-search {
+    max-height: 2vh;
+    max-width: 2.5vw;
 }
