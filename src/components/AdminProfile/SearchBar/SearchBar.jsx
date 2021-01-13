@@ -22,7 +22,7 @@ const SearchBar = () => {
     // Función que realiza un GET para buscar un empleado concreto y que le pasamos el valor almacenado del Hook SEARCH
     const getData = () => {
 
-        axios.post('http://localhost:8000/api/user/search_one', search)
+        axios.post('https://worklog-app-frontend.herokuapp.com/api/user/search_one', search)
 
             .then(response => {
                 localStorage.setItem('search_res', JSON.stringify(response.data))
