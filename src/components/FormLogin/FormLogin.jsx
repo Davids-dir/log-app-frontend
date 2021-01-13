@@ -30,12 +30,13 @@ const FormLogin = () => {
     // Funcion para el envio de datos contra la DB
     const SendData = () => {
 
-        getIP();
-
+         //getIP();
+        
         // POST hacia el endpoint de Login
         axios.post('https://worklog-app-backend.herokuapp.com/api/user/login', user)
 
             .then(res => {
+                console.log('Entro')
                 localStorage.setItem('user', JSON.stringify(res.data))
 
                 setTimeout(() => {
@@ -44,7 +45,15 @@ const FormLogin = () => {
                 }, 1000)
 
             })
-            .catch(error => console.log(error))
+            .catch(err => {
+                if (err.response) {
+                  console.log(err.response)
+                } else if (err.request) {
+                  console.llog('Nunca se hizo la request')
+                } else {
+                  console.log('todo lo demas')
+                }
+            })
     }
 
     return (
