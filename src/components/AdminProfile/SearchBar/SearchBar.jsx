@@ -18,7 +18,6 @@ const SearchBar = () => {
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
     const handleSearch = e => { setSearch({ ...search, [e.target.name]: e.target.value }) }
 
-    //  FUNCION SEARCH
     // Función que realiza un GET para buscar un empleado concreto y que le pasamos el valor almacenado del Hook SEARCH
     const getData = () => {
 
