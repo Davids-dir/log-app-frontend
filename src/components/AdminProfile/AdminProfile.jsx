@@ -22,13 +22,16 @@ const AdminProfile = () => {
     const [deleteEntry, setDeleteEntry] = useState(false);
 
     // Hook para mostrar el recuadro de perfil y eliminar un empleado
-    const [showUser, setShowUser] = useState(JSON.parse(localStorage.getItem('search_res')))
+    const [showUser, setShowUser] = useState(null)
+    
 
     // Eventos en el DOM
     const eventRoster = () => setShowMenu(!showMenu)
     const eventNewEntry = () => setNewEntry(!newEntry)
     const eventModify = () => setModifyEntry(!modifyEntry)
     const eventDelete = () => setDeleteEntry(!deleteEntry)
+    const eventUser = () => setShowUser()
+
 
     // Función para eliminar a un empleado de la base de datos
     const deleteUser = () => {
@@ -38,7 +41,11 @@ const AdminProfile = () => {
             .catch(error => console.log(error))
     }
 
-    
+    // Hook de Efecto
+    useEffect (() => {
+        console.log(showUser)
+        //setShowUser(JSON.parse(localStorage.getItem('search_res')))
+    }, [showUser])
 
     return (
 
@@ -48,7 +55,7 @@ const AdminProfile = () => {
                 <button id='button-manage' type='button' onClick={eventRoster}>Gestionar empleados</button>
             </div>
 
-            {/* Panel que se muestra si el estado del HOOK de empleados pasa a TRUE */}
+            {/* Panel que se muestra si el estado del Hook de empleados pasa a TRUE */}
             {showMenu ?
                 <div className="options-container">
                     <button className="button-admin" onClick={eventNewEntry} >Registrar un empleado</button>
@@ -82,6 +89,7 @@ const AdminProfile = () => {
                     <div className="search-container">
                         <SearchBar />
                     </div>
+                    
                     {showUser ?
                         <div className="data-response-search">
                             <div className="close-window">

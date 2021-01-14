@@ -7,13 +7,13 @@ import { MDBCol, MDBIcon } from "mdbreact";
 import './SearchBar.scss';
 
 
-
 // Componente de busqueda de empleados
 const SearchBar = () => {
 
     // Hook de busqueda de un trabajador
-    const [search, setSearch] = useState({ email: '' })
-    const [infoError, setInfoError] = useState('')
+    const [search, setSearch] = useState({ email: '' });
+    const [infoError, setInfoError] = useState('');
+
 
     // Evento donde recojo la informacion del input de Busqueda para eliminar empleados de la DB
     const handleSearch = e => { setSearch({ ...search, [e.target.name]: e.target.value }) }
@@ -32,7 +32,7 @@ const SearchBar = () => {
             })
     }
 
-    
+
     return (
         <MDBCol className="search-bar" md="6">
             <form className="form-inline mt-4 mb-4">

@@ -30,7 +30,7 @@ const FormLogin = () => {
     // Funcion para el envio de datos contra la DB
     const SendData = () => {
 
-         //getIP();
+         getIP();
         
         // POST hacia el endpoint de Login
         axios.post('https://worklog-app-backend.herokuapp.com/api/user/login', user)
