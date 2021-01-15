@@ -114,6 +114,14 @@
     min-width: 100%;
 }
 
+.pause-button-container-alt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 17.5vh;
+    max-width: 100%;
+}
+
 .pause-log {
     background: #ff2e63;
     color: white;
@@ -125,6 +133,10 @@
 
 .data-container {
     background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: #ff2e63 solid 1px;
     border-radius: 6px;
     min-height: 45vh;

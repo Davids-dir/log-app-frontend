@@ -18,6 +18,11 @@ const UserProfile = () => {
     const [stopButton, setStopButton] = useState(false);
     const [inPauseButton, setInPauseButton] = useState(false);
 
+    // Hooks para los registro de los empleados
+    const [startDataWork, setStartDataWork] = useState();
+    const [stopDataWork, setStopDataWork] = useState();
+    const [pauseDataStart, setPauseDataStart] = useState();
+    const [pauseDataStop, setPauseDataStop] = useState();
 
     // Eventos en el DOM
     const startWork = () => setStartButton(!startButton);
@@ -28,6 +33,11 @@ const UserProfile = () => {
     const changeButton = () => {
         stopWork()
         startWork()
+    }
+
+    const inWorkButtons = () => {
+        stopWork()
+        startPause()
     }
 
 
@@ -44,7 +54,7 @@ const UserProfile = () => {
         axios.post('https://worklog-app-backend.herokuapp.com/api/log/start/' + user.user.id, ip_direction)
 
             .then((response) => {
-                localStorage.setItem('start_res', JSON.stringify(response.data))
+                setStartDataWork(response.data)
             })
             .catch(error => console.log(error))
     }
@@ -54,11 +64,12 @@ const UserProfile = () => {
 
         axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.startpause/' + user.user.id)
 
-        .then((response) => {
-            localStorage.setItem('start_pause', JSON.stringify(response.data))
-            console.log(response.data)
-        })
-        .catch(error => console.log(error))
+            .then((response) => {
+                setPauseDataStart(response.data)
+                inWorkButtons()
+
+            })
+            .catch(error => console.log(error))
     }
 
     // Función para reanudar la pausa de un empleado
@@ -66,20 +77,24 @@ const UserProfile = () => {
 
         axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.endpause/' + user.user.id)
 
-        .then((response) => {console.log(response.data)})
-        .catch(error => console.log(error))
+            .then((response) => {
+                setPauseDataStop(response.data)
+                inWorkButtons()
+            })
+            .catch(error => console.log(error))
     }
 
     // Función para terminar la jornada de un empleado
     const dbStopWork = () => {
 
-        axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.stop' + user.user.id)
+        axios.put('https://worklog-app-backend.herokuapp.com/api/log/update.stop/' + user.user.id)
 
-        .then((response) => {console.log(response.data)})
-        .catch(error => console.log(error))
+            .then((response) => {
+                setStopDataWork(response.data)
+            })
+            .catch(error => console.log(error))
     }
 
-    const data_logStart = JSON.parse(localStorage.getItem('start_res'));
 
     return (
         <div className="user-container">
@@ -99,22 +114,28 @@ const UserProfile = () => {
                         {stopButton ?
                             <div className="working-container">
                                 <div className="stop-button-container" onClick={changeButton}>
-                                    <button type="submit" className="stop-log" onClick={() => dbStopWork ()}>STOP</button>
+                                    <button type="submit" className="stop-log" onClick={() => dbStopWork()}>STOP</button>
                                 </div>
                                 <div className="pause-button-container">
-                                    <button className="pause-log" onClick={() => dbPauseWork ()}>Inicio descanso</button>
+                                    <button className="pause-log" onClick={() => dbPauseWork()}>Inicio descanso</button>
                                 </div>
-                                {inPauseButton ? 
-                                null
-                                :
-                                null}
                             </div>
                             :
-                            null}
+                            <div>
+                                {inPauseButton ?
+                                    <div className="pause-button-container-alt">
+                                        <button className="pause-log" onClick={() => dbPauseEnd()}>Finalizar descanso</button>
+                                    </div>
+                                    :
+                                    null}
+                            </div>}
                     </div>
                     <div className="info-panel">
                         <div className="data-container">
-                            <div className="start-info-panel">{data_logStart ? data_logStart.message : null } a las {data_logStart ? data_logStart.hora : null }</div>
+                            <div className="start-info-panel">{startDataWork ? startDataWork.message : null} {startDataWork ? startDataWork.hora : null}</div>
+                            <div className="start-info-panel">{pauseDataStart ? pauseDataStart.message : null} {pauseDataStart ? pauseDataStart.hora : null}</div>
+                            <div className="start-info-panel">{stopDataWork ? stopDataWork.message : null} {stopDataWork ? stopDataWork.hora : null}</div>
+                            <div className="start-info-panel">{pauseDataStop ? pauseDataStop.message : null} {pauseDataStop ? pauseDataStop.hora : null}</div>
                         </div>
                     </div>
                 </div>

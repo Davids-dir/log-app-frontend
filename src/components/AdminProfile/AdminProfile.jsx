@@ -1,5 +1,5 @@
 // Importo las dependencias necesarias
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 
 // Importo la hoja de estilos
