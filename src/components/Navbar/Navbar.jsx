@@ -15,8 +15,6 @@ const Navbar = () => {
     // Hook para cambiar el estado del Menu
     const [menu, setMenu] = useState(false);
 
-   
-
     // Logica para abrir o cerrar el Menu
     const showMenu = () => setMenu(!menu);
 

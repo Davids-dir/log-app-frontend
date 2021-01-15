@@ -48,13 +48,11 @@ const NavbarData = () => {
             }
         })
             .then(response => {
-                localStorage.clear()
-                console.log(response.data)
+                setUser(localStorage.clear())
 
                 setTimeout(() => {
                     redirect.push('/')
-                    // window.location.href="/";
-                }, 1200);
+                }, 300);
 
             })
             .catch(error => console.log(error))
@@ -62,8 +60,8 @@ const NavbarData = () => {
 
     return (
 
-        <div className="nav-link-container">{
-            !user ?
+        <div className="nav-link-container">
+            {!user ?
                 menuData.map((item, indexItem) => {
                     return (
                         <a key={indexItem} className="navItem-data" href={item.path}>

@@ -7,6 +7,7 @@ import './AdminProfile.scss';
 import Register from './RegisterForm/RegisterForm';
 import Modify from './ModifyForm/ModifyForm';
 import SearchBar from './SearchBar/SearchBar';
+import ShowLogs from './EntryLogs/EntryLogs';
 
 
 // Componente para la gestion de los empleados
@@ -17,7 +18,7 @@ const AdminProfile = () => {
     const [newEntry, setNewEntry] = useState(false);
     const [modifyEntry, setModifyEntry] = useState(false);
     const [deleteEntry, setDeleteEntry] = useState(false);
-    // const [showUser, setShowUser] = useState(JSON.parse(localStorage.getItem('search_res')))
+    const [showLog, setShowLog] = useState(false);
 
 
     // Eventos en el DOM
@@ -25,7 +26,8 @@ const AdminProfile = () => {
     const eventNewEntry = () => setNewEntry(!newEntry)
     const eventModify = () => setModifyEntry(!modifyEntry)
     const eventDelete = () => setDeleteEntry(!deleteEntry)
-    
+    const eventLogs = () => setShowLog(!showLog)
+
 
 
     // Función para eliminar a un empleado de la base de datos
@@ -47,6 +49,7 @@ const AdminProfile = () => {
                     <button className="button-admin" onClick={eventNewEntry} >Registrar un empleado</button>
                     <button className="button-admin" onClick={eventModify}>Modificar un empleado</button>
                     <button className="button-admin" onClick={eventDelete}>Dar de baja un empleado</button>
+                    <button className="button-admin" onClick={eventLogs}>Mostrar Entradas y Salidas</button>
                 </div>
                 :
                 null}
@@ -78,6 +81,14 @@ const AdminProfile = () => {
                 </div>
                 :
                 null}
+            {showLog ?
+            <div className="log-options">
+                <div className="logs-container">
+                    <ShowLogs />
+                </div>
+            </div>
+            :
+            null}
         </div>
     )
 }

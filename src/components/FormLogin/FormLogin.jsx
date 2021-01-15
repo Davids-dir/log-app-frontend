@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MDBInput } from "mdbreact";
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import axios from 'axios';
 
 // Estilos
@@ -15,45 +15,36 @@ const FormLogin = () => {
     // Evento donde asigno el valor del Input al 'user'
     const eventHandler = e => { setUser({ ...user, [e.target.name]: e.target.value }) }
 
-    const redirect = useHistory();
+    //const redirect = useHistory();
 
     // Funcion para conseguir la IP del dispositivo del usuario que hace Login
     const getIP = () => {
 
         axios.get('https://api.ipify.org?format=json')
 
-            .then(res => localStorage.setItem('ip_direction', JSON.stringify(res.data)))
-            .catch(error => { console.log(error) })
+            .then(response => localStorage.setItem('ip_direction', JSON.stringify(response.data)))
+            .catch(error => console.log(error))
 
     }
 
-    // Funcion para el envio de datos contra la DB
+    // Funcion de LOGIN
     const SendData = () => {
 
-         getIP();
-        
+        getIP();
+
         // POST hacia el endpoint de Login
         axios.post('https://worklog-app-backend.herokuapp.com/api/user/login', user)
 
-            .then(res => {
-                console.log('Entro')
-                localStorage.setItem('user', JSON.stringify(res.data))
+            .then(response => {
+                localStorage.setItem('user', JSON.stringify(response.data))
 
                 setTimeout(() => {
-                    redirect.push('/user/profile')
-                    // window.location.href="/user/profile"
-                }, 1000)
+                    //redirect.push('/user/profile')
+                    window.location.href="/user/profile"
+                }, 300)
 
             })
-            .catch(err => {
-                if (err.response) {
-                  console.log(err.response)
-                } else if (err.request) {
-                  console.llog('Nunca se hizo la request')
-                } else {
-                  console.log('todo lo demas')
-                }
-            })
+            .catch(error => { console.log(error) })
     }
 
     return (
@@ -66,7 +57,7 @@ const FormLogin = () => {
                 <div id="form-login" className="password-label">
                     <MDBInput label="Contraseña" size="lg" name="password" type="password" onChange={eventHandler} />
                 </div>
-                
+
                 <button id="form-button" type="button" onClick={() => SendData()}>Login</button>
             </div>
         </div>

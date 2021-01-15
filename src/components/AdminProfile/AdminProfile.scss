@@ -36,12 +36,12 @@
         background: #eaeaea;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
         border: #252a34 solid 1px;
         border-radius: 6px;
-        max-height: 35vh;
-        min-width: 11.5%;
+        max-height: 60vh;
+        min-width: 13.5%;
     }
 
     .button-admin {
@@ -52,10 +52,8 @@
         align-items: center;
         border: #252a34 solid 1px;
         border-radius: 4px;
-        margin-top: 1.5vh;
-        margin-bottom: 1.5vh;
-        min-height: 20%;
-        min-width: 60%;
+        min-height: 10%;
+        max-width: 70%;
     }
 
     .new-entry {
@@ -83,4 +81,19 @@
         min-width: 70%;
     }
 
+    .log-options {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50%;
+    }
+
+    .logs-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 50vh;
+        min-width: 50%;
+    }
 }

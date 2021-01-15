@@ -66,7 +66,7 @@ const Register = ( ) => {
                     <option value="half_time">Media Jornada - 20h/semanales</option>
                     <option value="practices">Practicas - 8h/semanales</option>
                 </select>
-                <button type='button' onClick={ ( ) => sendData ( )  }>Registrar</button>
+                <button className="register-button" type='button' onClick={ ( ) => sendData ( )  }>Registrar</button>
             </form>
         </div>
     )
