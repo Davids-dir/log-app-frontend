@@ -1,0 +1,27 @@
+.show-logs-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.button-container {
+    max-height: 15vh;
+    min-width: 15%;
+}
+
+.search-button {
+    background-color: #252a34;
+    color: #eaeaea;
+    border: none;
+    border-radius: 10px;
+    min-height: 3.5vh;
+    min-width: 7.5vw;
+}
+
+.null-space {
+    min-height: 3.5vh;
+    width: 100%;
+}

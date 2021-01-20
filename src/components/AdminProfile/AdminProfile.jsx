@@ -7,8 +7,7 @@ import './AdminProfile.scss';
 import Register from './RegisterForm/RegisterForm';
 import Modify from './ModifyForm/ModifyForm';
 import SearchBar from './SearchBar/SearchBar';
-import ShowLogs from './EntryLogs/EntryLogs';
-
+import ShowLogs  from './ShowLogs/ShowLogs';
 
 // Componente para la gestion de los empleados
 const AdminProfile = () => {

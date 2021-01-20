@@ -31,7 +31,6 @@ const SearchBar = () => {
                 setShowUser(JSON.parse(localStorage.getItem('search_res')))
             })
             .catch(error => {
-                console.log(error.response.data)
                 setInfoError(error.response.data)
             })
     }

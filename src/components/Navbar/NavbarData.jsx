@@ -19,20 +19,12 @@ const NavbarData = () => {
             title: 'Acceso',
             path: '/login'
         },
-        {
-            title: 'Galeria',
-            path: '/media'
-        },
     ]
 
     const menuDataUser = [
         {
             title: 'Cerrar sesion',
             path: '#'
-        },
-        {
-            title: 'Galeria',
-            path: '/media'
         },
     ]
 

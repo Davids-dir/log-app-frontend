@@ -86,14 +86,15 @@
         justify-content: center;
         align-items: center;
         min-height: 50vh;
-        min-width: 50%;
+        min-width: 60%;
     }
 
     .logs-container {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         min-height: 50vh;
-        min-width: 50%;
+        min-width: 90%;
     }
 }
