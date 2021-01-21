@@ -1,3 +1,102 @@
+// Breaklpoint para dispositivos moviles
+@media only screen and (max-width: 1024px) {
+    .search-container {
+        flex: 0 0 50%;
+        min-width: 95%;
+    }
+    
+    .button-container {
+        max-height: 15vh;
+        min-width: 15%;
+    }
+    
+    .search-button {
+        background-color: #252a34;
+        color: #eaeaea;
+        border: none;
+        border-radius: 10px;
+        min-height: 3.5vh;
+        min-width: 7.5vw;
+    }
+    
+    #error-search {
+        max-height: 2vh;
+        max-width: 2.5vw;
+    }
+    
+    .modal-data {
+        min-height: 5vh;
+        width: auto;
+    }
+    
+    .space-container {
+        min-height: 5vh;
+        min-width: auto;
+    }
+    
+    .data-response-search {
+        background: #eaeaea;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border: #ff2e63 solid 1px;
+        border-radius: 4px;
+        min-height: 40vh;
+        min-width: 50%;
+    }
+    
+    .close-window {
+        max-height: 3vh;
+        min-width: 100%;
+    }
+    
+    #close-modal-user {
+        display: flex;
+        justify-content: flex-end;
+        max-height: 3vh;
+        max-width: 95%;
+    }
+    
+    .show-data-response-search {
+        display: flex;
+        justify-content: center;
+        max-height: 3vh;
+        min-width: 50%;
+    }
+    
+    #delete-button {
+        background: #ff2e63;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        box-shadow: black 0px 2px 6px 1px;
+        min-height: 3vh;
+        min-width: 45%;
+    }
+    
+    .react-icons {
+        height: 1.5em;
+        width: 1.5em;
+    }
+    
+    #error-search {
+        background: #eaeaea;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: black solid 1px;
+        border-radius: 4px;
+        min-height: 20vh;
+        min-width: 100%;
+    }
+}
+
+// Breakpoint para pantallas a partir de 1024px en adelante
+@media  only screean and (min-width: 1024px) {
 .search-container {
     flex: 0 0 50%;
     max-width: 50%;
@@ -90,4 +189,5 @@
     border-radius: 4px;
     min-height: 20vh;
     min-width: 100%;
+}
 }
