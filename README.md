@@ -30,7 +30,10 @@ npm start
 
 
 ### 🔎 Galeria
+Pantalla de Login
 ![Login](http://g.recordit.co/JGRheWqKeS.gif)
+
+Vista de Administrador para registrar empleados
 ![Registro de empleado](http://g.recordit.co/DEfNEt57dh.gif)
 
 
