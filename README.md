@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# ⏲ TIMERX ⏲
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### ¿Que es TIMERX?
+TIMERX es una aplicación creada para llevar el registro de entrada y salida del personal de tu empresa, ademas de poder gestionar tu plantilla agregando nuevos empleados o modificandolos.
 
-## Available Scripts
+### 💿 Tecnologias empleadas
+- [Node.js](https://nodejs.org/es/docs/)
+- [React.js](https://es.reactjs.org/)
 
-In the project directory, you can run:
 
-### `npm start`
+### 🛠 ¿Como funciona?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  - Daremos de alta un usuario con permisos de 'Administrador' para que pueda gestionar tus empleados.
+  - En ese momento el empleado podrá acceder y registrar la entrada, pausa o salida de su jornada laboral accediendo con
+  el email y contraseña que le haya proporcionado el 'Administrador'.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+### 💾 Instalación
+###### Si quieres usarlo de manera local en tu ordenador:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```git clone https://github.com/Davids-dir/worklog-app-frontend.git```
 
-### `npm run build`
+Instala las dependencias necesarias para su correcto funcionamiento. 
+```
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+###### O bien puedes emplearlo accediendo al deploy en: https://worklog-app-frontend.herokuapp.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 🔎 Galeria
+![Login](http://g.recordit.co/JGRheWqKeS.gif)
+![Registro de empleado](http://g.recordit.co/DEfNEt57dh.gif)
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+License
+----
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+MIT
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Software gratuito**
