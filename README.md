@@ -4,9 +4,10 @@
 TIMERX es una aplicación creada para llevar el registro de entrada y salida del personal de tu empresa, ademas de poder gestionar tu plantilla agregando nuevos empleados o modificandolos.
 
 ### 💿 Tecnologias empleadas
+- [JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript)
 - [Node.js](https://nodejs.org/es/docs/)
 - [React.js](https://es.reactjs.org/)
-
+- [Sass](https://sass-lang.com/)
 
 ### 🛠 ¿Como funciona?
 
